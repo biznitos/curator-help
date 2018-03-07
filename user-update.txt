@@ -1,0 +1,41 @@
+UPDATING A USER ACCOUNT
+-----------------------
+If a user is logged in, you can create a form that they can use to update their account.
+It can be at any permalink you like. The form should look like this:
+
+Available fields:
+* email
+* name
+* phone
+* occupation
+* gender (male|female|other|etc)
+* url 
+* settings (a map of any settings you like)
+(other fields to be added soon)
+
+<form method="POST" action="/api/user/v1" enctype="multipart/form-data">
+  <!-- where to go after everything succeeds -->
+  <input type="hidden" name="return_url" value="/">
+  
+  <!-- where to go if the update fails -->
+  <input type="hidden" name="failure_url" value="/">
+  
+  <!-- the fields -->
+  <label>Your name</label>
+  <input type="text" name="name" value="{{user.name}}">
+  
+  <label>Email</label>
+  <input type="email" name="email" value="{{user.email}}">
+
+  <label>What kind of computer do you have</label>
+  <input type="text" name="settings[computer_type]" value="{{user.settings.computer_type}}">
+
+  <!-- 
+    more fields as needed..... 
+  -->
+
+  <label>Upload your photo</label>
+  <input type="file" name="photo" multiple="false" accept="image/*">
+  
+  <button>Update account</button>
+</form>
