@@ -1,1 +1,84 @@
 
+AUTHENTICATING USERS
+--------------------
+
+The Curator platform allows you to authenticate users.
+No password is used, instead, users enter just an email
+address.
+
+They receive an email that contains a special link
+which logs in the users.
+
+LOGGING IN
+----------
+Logging in either creates a new account on the current site,
+or uses an existing account.
+
+Create a page with the permalink:
+"/auth"
+
+The HTML in the page should like this:
+
+<form method="POST" action="/api/auth/v1">
+  <input type="hidden" name="return_url" value="/authin">
+  <input type="hidden" name="failure_url" value="/auth">
+  <label>Your email address</label>
+  <input type="email" name="email" placeholder="me@myemail.com" autofocus="true">
+  <button class="button btn expanded success">NEXT &rarr;</button>
+</form>
+
+"return_url" and "failure_url" represents urls that they user should redirect to
+when the login is successful or a failure.
+
+AUTHORIZING
+------------
+In the example above, the user is redirected to "/authin" which
+is a page that requests the login token. This page should always 
+have a permalink of:
+"/authin"
+
+The HTML of the page should look like this:
+
+<form method="POST" action="/api/auth_check/v1">
+  <input type="hidden" name="return_url" value="/">
+  <input type="hidden" name="failure_url" value="/authin">
+  <label>
+    Check your email for a code we just sent. 
+    <b>Then enter it here</b>
+  </label>
+  <input type="number" name="auth_token" placeholder="999999" autofocus="true">
+  <button class="button btn expanded alert">SIGN IN</button>
+</form>
+  
+Again, use "return_url" or "failure_url" to redirect the user to where you'd like them to go.
+
+CHANGING THE AUTHORIZATION EMAIL TEMPLATE
+-----------------------------------------
+
+By default, the system has an authorization email which you can override with your own format.
+
+If you want to change this email, create it under the permalink:
+"auth"
+
+It should look something like this:
+<html>
+<head><title>New Lead</title></head>
+<body style="font-family: Helvetica Neue, Arial, Helvetica, sans-serif; font-size: 17px;">
+  <div style="max-width: 480px;">
+    <p>
+      Hi,
+    </p>
+    <p>
+      Here's your {{site_name}} sign in code.
+      Use it now, because it expires in 15 minutes.
+    </p>
+    <h3 style="color: green;">{{auth_token}}</h3>
+    <p>
+      Still having problems logging in?<br/>
+      Hit reply to get some support.<br/>
+      {{site_email}}
+    </p>
+  </div>
+</body>
+</html>
+  
