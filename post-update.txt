@@ -15,8 +15,38 @@ Optional fields
 * cover_image (attached file)
 * location (example: "Kingston, Jamaica")
 
-Example form
-============
+Viewing a Post
+=====================
+Normally, you'd be viewing a post from a link like this:
+https://mysite.com/blog/visit-jamaica
+
+Enabling Editing
+================
+In the template to view the post, you can check 
+if the user is logged in and the post belongs to them.
+In which case you can show a button.
+
+{% if user.id == post.created_by %}
+<!-- show an edit link somewhere in the view template -->
+<a href="{{post.permalink}}?edit=1">Edit Post</a>
+{% endif %}
+
+Displaying form or post
+=======================
+Now you'd have a url like this:
+https://mysite.com/blog/visit-jamaica?edit=1
+
+So your entire template would look something like:
+
+{% if user.id == post.created_by && params.edit == "1" %}
+  <!-- show the form in here -->
+{% else %}
+  <!-- show the post as usual here -->
+{% endif %}
+
+
+Example Edit Form
+=================
 <form method="POST" action="/api/post/vi/{{post.zid}}" enctype="multipart/form-data">
 
   <label>Title</label>
