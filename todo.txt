@@ -1,6 +1,5 @@
 TODO
 
-* Edit posts
 * Expiration dates for posts
 * Analytics on back end
 * Newsletter sending (formalize)
