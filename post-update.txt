@@ -1,0 +1,40 @@
+UPDATING A POST
+
+Posts can only be updated by the person who created them.
+You need the "zid" of the post in order to update it.
+
+Updateable fields (required when updating):
+* title 
+* subtitle
+* content
+* description 
+* url
+* meta
+
+Optional fields
+* cover_image (attached file)
+* location (example: "Kingston, Jamaica")
+
+Example form
+============
+<form method="POST" action="/api/post/vi/{{post.zid}}" enctype="multipart/form-data">
+
+  <label>Title</label>
+  <input type="text" name="post[title]" value="{{post.title}}">
+
+  <label>Content</label>
+  <textarea name="post[content]">{{post.content}}</textarea>
+
+  ... more fields ...
+
+  <!-- example meta (Setting) field - you can have many attributes here -->
+  <label>Phone number</label>
+  <input type="file" name="post[meta][phone]" value="{{post.meta.phone}}">
+
+  <!-- uploading photo -->
+  <label>Upload a photo</label>
+  <input type="file" name="cover_image" accept="image/*">
+
+  <button>Update COntent</button>
+  
+</form>
