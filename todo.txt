@@ -1,0 +1,15 @@
+TODO
+
+* Edit posts
+* Expiration dates for posts
+* Analytics on back end
+* Newsletter sending (formalize)
+* Multi-post newsletter (cart system)
+* Document email templates
+
+
+ERRORS
+* Layout gets added to javascript
+* Layout gets added to stylesheets
+* Edit profile, only add edit given columns
+
