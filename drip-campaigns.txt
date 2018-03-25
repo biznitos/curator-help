@@ -1,0 +1,57 @@
+DRIP CAMPAIGNS
+==============
+
+You can setup automated emails that can go out to users.
+Or users can set them up themselves based on their individual criteria.
+
+Examples
+--------
+1. Global Drip Campaign
+Setup a campaign to go out to every subscribed user in the system.
+It will send out an email based on your schedule you set
+with the posts you want as new ones are added or using the
+once already there, starting at the beginning.
+
+2. User defined drip campaign
+You can setup a page on the site for users to design the kind of
+campaign they want.
+Exmaple, they can pick a make and model of a car and get 
+info based on that.
+
+Setup Global Drip Campaign
+==========================
+Use the "Drips" menu in the admin to set up one of these.
+
+User Defined Drip Campaign
+==========================
+A user can subscribe to a drip campaign by using a form like this:
+
+<form method="POST" action="https://admin.revsense.com">
+  <h1>Get updates on Portland</h1>
+  
+  <input type="hidden" name="return_url" value="/thanks">
+  <input type="hidden" name="failure_url" value="/subscribe">
+  
+  <!-- user info (add any other user info fields you need) -->
+  <label>Your email</label>
+  <input type="email" name="email">
+  <label>Your name</label>
+  <input type="text" name="name">
+  
+  <!-- which posts you want to send -->
+  <input type="hidden" name="type" value="blog">
+  <input type="hidden" name="subtype" value="portland">
+  
+  <!-- how often you want to send (daily, weekly, biweekly, monthly) -->
+  <input type="hidden" name="schedule" value="weekly">
+  
+  <!-- which day of the week you want to send (sun-sat) -->
+  <input type="hidden" name="schedule_weekday" value="mon">
+  
+  <!-- what time you want to send (24 hour time format) --->
+  <input type="hidden" name="schedule_time" value="8:30">
+  
+  <button>Subscribe</button>
+</form>
+
+Users will get a confirmation email which they can unsubscribe from if they need to.
