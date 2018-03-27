@@ -1,0 +1,30 @@
+Pagination
+----------
+
+You can paginate a list of posts so users can go from page to page.
+The following liquid variables are available:
+
+* total_entries - the number of items in the total query
+* page_size - number of items in each page
+* total_pages - number of pages overall
+* page_number - current page number
+* next_page - the next page number
+* prev_page - the previous page number
+* next_page_link - the complete link to the next page
+* prev_page_link - the complete link to the previous page
+
+Example of pagination, assuming you have a bunch of posts:
+
+<!-- begin code -->
+{% if total_pages > page_number %}
+<a href="{{next_page_link}}">Next</a>
+{% endif %}
+
+Page: {{page_number}}
+
+{% if page_number > 0 %}
+<a href="{{prev_page_link}}">Previous</a>
+{% endif %}
+<!-- end page -->
+
+This should be flexible enough so you implement simple pagination schemes.
