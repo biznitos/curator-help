@@ -1,0 +1,25 @@
+EMAIl TEMPLATES
+===============
+
+Email templates are quite similar to standard HTML template.
+Here are the liquid variables available
+
+{{url.xxxx}}
+All data for the user you are sending the email to
+
+{{site.xxx}}
+All info for your site
+
+{{unsubscribe_url}}
+The URL the user should click to unsubscribe (from all future mailings, except notifications)
+
+{{open_url}}
+THe URL you will need to put in an image tag to log opening of the email.
+Example:
+<img src="{{open_url}}" style="width: 1; height: 1;">
+
+{{year}}
+SHows the current year 
+
+{{time}}
+Shows the current time
