@@ -35,8 +35,17 @@ Optional fields:
 * customer[meta1]
 * customer[meta2]
 * customer[meta3]
+* data[xxxxx] - xxxxxx can be anything. This allows you to create quite complex forms as needed
+
+NOTE:
+Customer[xxxxxx] information will only be added once. If the customer already exists in the system, this information will not overwrite what's already there. Create a profile update form to deal with that.
 
 Lead Notificaiton:
+* notify
+a Post ID (zid) This makes it easy to make a lead respond to the author of a post. Example, a user can post some ifnormation, then a lead can be captured based on it. An email notification will be sent ot the author of the form with all the above fields captured.
 
 Autoresponder:
+* autoresponder
+a Post ID (zid). This is good if you want to provide a download or some other information that you want to immediately send to the user. Prepare a post, with an external link to anything you want. Once the lead is submitted, an email will be sent to the submitter with anything you hve in the post.
 
+Leads can be viewed in the Admin.
