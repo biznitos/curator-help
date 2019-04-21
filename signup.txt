@@ -8,8 +8,9 @@ Verb
 ----
 POST
 
-Parameters
-----------
+Generic Parameters
+(Universal to all sites)
+------------------
 * email (required)
 * name
 * phone
@@ -17,6 +18,7 @@ Parameters
 * first_name
 * last_name
 * middle_name
+* occupation
 * street
 * city
 * country_code
@@ -25,7 +27,11 @@ Parameters
 * meta1
 * meta2
 * meta3
-* data (site specific)
+
+Site Parameters
+(For specific sites)
+---------------
+* data (map of many parameters)
 * utm_xxxx variables
 
 Control Parameters
@@ -33,4 +39,3 @@ Control Parameters
 * return_url (where to go after successful signup)
 * failure_url (where to go when signup failed)
 * login (if set to any value, then will also login user after successful signup)
-
