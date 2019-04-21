@@ -1,0 +1,27 @@
+SIGNUP
+
+Endpoint
+--------
+/api/singup/v1
+
+Verb
+----
+POST
+
+Parameters
+----------
+* email (required)
+* name
+* phone
+* location
+* password
+* attachment (photo)
+* location (eg: "Miami Beach, Florida")
+* utm_xxxx variables
+* login (if set to any value, then will also login user after successful signup)
+
+Control Parameters
+* return_url (where to go after successful signup)
+* failure_url (where to go when signup failed)
+
+
