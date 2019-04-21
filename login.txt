@@ -1,4 +1,42 @@
 LOGIN
+=====
 
-TODO
+You can use the default login form without doing anything,
+or create a form to override it.
+
+FORMAT
+------
+HTML with Liquid markup
+
+FORM PERMALINK
+--------------
+/login
+
+ACTION
+------
+/login (POST)
+
+PARAMETERS
 ----------
+* email - {{params.email}}
+* password
+* return_url (optional) - {{params.return_url}}
+* failure_url (optional)
+
+NOTES
+-----
+If there was an error, and the failure_url is left blank,
+the user will be redirected back to the login form
+with the following additonal parameter in the URL:
+* error
+
+You can use the error as you see fit as in the example.
+
+REDIRECTING BACK
+----------------
+When calling the login form, you can have it redirect
+back to a place of your own choosing, like so:
+/login?return_url=/account
+
+This will instruct the login processor to redirect 
+to the "/account" path upon successful login.
