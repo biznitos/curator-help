@@ -1,41 +1,50 @@
-UPDATING A USER ACCOUNT
------------------------
-If a user is logged in, you can create a form that they can use to update their account.
-It can be at any permalink you like. The form should look like this:
+USER UPDATE
+===========
 
-Available fields:
-* email
+You can use the default user update form without doing anything,
+or create a form to override it.
+
+FORMAT
+------
+HTML with Liquid markup
+
+FORM PERMALINK
+--------------
+/account
+
+ACTION
+------
+/account (POST)
+
+CORE USER INFO
+--------------
+* email - {{params.email}} (required)
+* password (will update password if valid replacent is given)
 * name
-* phone
-* occupation
-* gender (male|female|other|etc)
-* url 
-* settings (a map of any settings you like)
-(other fields to be added soon)
+* attachment (file upload of photo)
+* meta1
+* meta2
+* meta3
 
-<form method="POST" action="/api/user/v1" enctype="multipart/form-data">
-  <!-- where to go after everything succeeds -->
-  <input type="hidden" name="return_url" value="/">
-  
-  <!-- where to go if the update fails -->
-  <input type="hidden" name="failure_url" value="/">
-  
-  <!-- the fields -->
-  <label>Your name</label>
-  <input type="text" name="name" value="{{user.name}}">
-  
-  <label>Email</label>
-  <input type="email" name="email" value="{{user.email}}">
+SITE SPECIFIC USER INFO
+-----------------------
+* data[xxx] (eg: data[phone], data[url]....)
+* utm_xxxx parameters
+* role (default "customer" -- cannot be changed)
 
-  <label>What kind of computer do you have</label>
-  <input type="text" name="settings[computer_type]" value="{{user.settings.computer_type}}">
+CONTROL PARAMETERS
+------------------
+* return_url (optional) - {{params.return_url}}
+* failure_url (optional)
 
-  <!-- 
-    more fields as needed..... 
-  -->
+NOTES
+-----
+If there was an error, and the failure_url is left blank,
+the user will be redirected back to the account form
+with the following additonal parameter in the URL:
+* error
 
-  <label>Upload your photo</label>
-  <input type="file" name="photo" multiple="false" accept="image/*">
-  
-  <button>Update account</button>
-</form>
+You can use the error as you see fit as in the default form.
+
+If no return_url is given, the user will be redirected 
+to the home page of the site.
