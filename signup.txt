@@ -1,41 +1,44 @@
 SIGNUP
+=====
 
-Endpoint
---------
+You can use the default signup form without doing anything,
+or create a form to override it.
+
+FORMAT
+------
+HTML with Liquid markup
+
+FORM PERMALINK
+--------------
 /signup
 
-Verb
-----
-POST
+ACTION
+------
+/signup (POST)
 
-Generic Parameters
-(Universal to all sites)
-------------------
-* email (required)
+CORE USER INFO
+--------------
+* email - {{params.email}} (required)
+* password
 * name
-* phone
-* gender
-* first_name (overrides "name")
-* last_name (overrides "name")
-* middle_name
-* occupation
-* street
-* city
-* country_code
-* dob (date of birth)
-* url
-* meta1
-* meta2
-* meta3
 
-Site Parameters
-(For specific sites)
----------------
-* data (map of many parameters)
-* utm_xxxx variables
+SITE SPECIFIC USER INFO
+-----------------------
+* data[xxx] (eg: data[phone], data[url]....)
+* utm_xxxx parameters
 
-Control Parameters
+CONTROL PARAMETERS
 ------------------
-* return_url (where to go after successful signup)
-* failure_url (where to go when signup failed)
-* login (if set to any value, then will also login user after successful signup)
+* return_url (optional) - {{params.return_url}}
+* failure_url (optional)
+
+NOTES
+-----
+If there was an error, and the failure_url is left blank,
+the user will be redirected back to the signup form
+with the following additonal parameter in the URL:
+* error
+
+You can use the error as you see fit as in the default form.
+
+The user will be logged in upon successful signup.
