@@ -13,15 +13,24 @@ Parameters
 * email (required)
 * name
 * phone
-* location
-* password
-* attachment (photo)
-* location (eg: "Miami Beach, Florida")
+* gender
+* first_name
+* last_name
+* middle_name
+* street
+* city
+* country_code
+* dob (date of birth)
+* url
+* meta1
+* meta2
+* meta3
+* data (site specific)
 * utm_xxxx variables
-* login (if set to any value, then will also login user after successful signup)
 
 Control Parameters
+------------------
 * return_url (where to go after successful signup)
 * failure_url (where to go when signup failed)
-
+* login (if set to any value, then will also login user after successful signup)
 
