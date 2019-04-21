@@ -2,7 +2,7 @@ SIGNUP
 
 Endpoint
 --------
-/api/singup/v1
+/signup
 
 Verb
 ----
@@ -15,8 +15,8 @@ Generic Parameters
 * name
 * phone
 * gender
-* first_name
-* last_name
+* first_name (overrides "name")
+* last_name (overrides "name")
 * middle_name
 * occupation
 * street
