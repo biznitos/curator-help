@@ -21,11 +21,21 @@ If using the "json" format, all post fields will be output, except private field
 Templates
 ---------
 For templates, only the content area of the template will be output in HTML format.
+The content area is parsed any any available liquid variables are interpolated
 
 Parameters
 ----------
 * raw - [html|json]
 * u - the user's numeric ID
+
+User Info
+---------
+In the content area being output, if the "u" parameter is passed,
+the following Liquid tags are available
+{{raw_user}}
+{{raw_user_site}}
+
+Private information, such as passwords etc are removed.
 
 NOTES
 -----
