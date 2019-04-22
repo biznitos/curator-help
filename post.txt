@@ -1,0 +1,70 @@
+POST ATTRIBUTES
+===============
+
+A full list of attributes for each post
+
+BASE
+----
+* id
+* zid
+* source_id
+* type
+* subtype
+* subtype
+* permalink
+* category_id (unused)
+
+BODY
+----
+* title
+* subtitle
+* description
+* content
+* url
+* meta_title
+* meta_description
+
+MEDIA
+-----
+* cover_image 
+* cover_video
+
+DATES
+-----
+* pubdate
+* created_by
+* updated_by
+* inserted_at
+* updated_at
+* expires
+
+ADDRESS
+-------
+* place_id
+* lat
+* lng
+* address
+* email
+* phone
+* city
+* country_code
+* region
+
+COMMERCE
+--------
+* price
+* currency
+* price_info
+* action
+
+META
+----
+* user_id
+* meta
+* ip
+* up
+* views
+* clicks
+* opens
+* src
+* src_id
