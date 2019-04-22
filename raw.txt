@@ -1,0 +1,32 @@
+RAW CONTENT
+===========
+
+Sometimes you might need the raw values of some content, 
+for AJAX and other requests.
+
+You can get raw content only for:
+* a single post
+* a single template (with no data attached to it)
+
+Example
+-------
+/blog/my-trip-to-america?raw=[html|json]
+/template-permalink?raw=html
+
+Posts
+-----
+For posts, using the "html" format will outout  just the content of the post.
+If using the "json" format, all post fields will be output, except private fields.
+
+Templates
+---------
+For templates, only the content area of the template will be output in HTML format.
+
+Parameters
+----------
+* raw - [html|json]
+* u - the user's numeric ID
+
+NOTES
+-----
+This is only triggered when the "raw" parameter is added.
