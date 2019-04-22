@@ -3,6 +3,17 @@ POST ATTRIBUTES
 
 A full list of attributes for each post
 
+You can access in liquid templates as in
+Single Post page: 
+<h1>{{post.title}}</h1>
+
+Multiple post pages will have 
+{{posts}}
+
+{% for post in posts %}
+  <p>{{post.title}}</p>
+{% endfor %}
+
 BASE
 ----
 * id
