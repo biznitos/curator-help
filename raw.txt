@@ -40,3 +40,7 @@ Private information, such as passwords etc are removed.
 NOTES
 -----
 This is only triggered when the "raw" parameter is added.
+
+With the exception of JSON, the content_type
+may be overriden if the origin content type was detected
+as other than HTML.
