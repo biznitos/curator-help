@@ -48,9 +48,16 @@ You can request an ad and put it in an iframe with the following path:
 
 Parameters:
 * type - banner | html | text.
-* r - rotation type: r=random, f=first in, l=last in, p=popular
+* r - rotation type: r=random, f=first in, l=last in, c=popular by clicks, v=most popular views
 * u - user_id of person who create ads.
 * l - limit (default 1)
 
 Ad output is always Raw HTML
+
+TODO
+====
+Additional "template" parameter, example "336x280" 
+would use that template to format an ad. 
+Not sure best way to implement this as yet.
+Could be some element of ad itself.
 
