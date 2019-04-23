@@ -62,7 +62,11 @@ templates using these permalinks (no leading "/"):
 * ad_text
 * ad_html
 
-These templates will not render layouts, only the bare content of the template itself.
+These templates will not render layouts, 
+only the bare content of the template itself.
+
+All system and site Liquid tags, 
+as well as the {{post}} tag with the ad are available.
 
 TODO
 ====
