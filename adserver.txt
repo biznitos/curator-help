@@ -57,7 +57,7 @@ Ad output is always Raw HTML
 Ad Templates
 ------------
 You can override system ad templates with
-templates using these permalinks:
+templates using these permalinks (no leading "/"):
 * ad_banner
 * ad_text
 * ad_html
