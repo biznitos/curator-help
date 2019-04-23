@@ -1,0 +1,56 @@
+AD SERVING
+==========
+
+Ads are just posts with:
+* title
+* cover_photo
+* cover_video
+* url
+
+Ad Types
+--------
+* Banner
+* Raw HTML
+* Text
+
+Creating an ad
+--------------
+Ads are just simple posts, but you need the following for each kind of ad:
+
+Banner Ads
+* title (for alt and identification only)
+* url
+* type = "ad"
+* subtype = "banner"
+
+Raw HTML
+* title (for identification)
+* content (the raw ad HTML)
+* type "ad"
+* subtype "html"
+
+Text
+* Title
+* Description
+* Url
+* type "ad"
+* subtype "text"
+
+Publishing an ad
+----------------
+Ads are published like you publish any other kind of web content.
+
+Serving Ads
+-----------
+You can request an ad and put it in an iframe with the following path:
+
+/adserve/:type
+
+Parameters:
+* type - banner | html | text.
+* r - rotation type: r=random, f=first in, l=last in, p=popular
+* u - user_id of person who create ads.
+* l - limit (default 1)
+
+Ad output is always Raw HTML
+
