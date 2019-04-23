@@ -1,0 +1,39 @@
+AD SERVING CODE 
+===============
+
+Example Ad Code
+---------------
+<!-- begin ad code -->
+<script>
+var bz_site = "https://www.yoursite.com";
+var bz_width = 336;
+var bz_height = 280;
+var bz_type = "banner";
+</script>
+<script src="https://admin.revsense.com/assets/ads.js">
+<!-- end ad code -->
+
+Where to place
+--------------
+Place the ad code where you need the ad to appear.
+NOT in the header or footer of your site.
+
+Example placement
+-----------------
+<html>
+<head>
+  <title>My Page</title>
+</head>
+<body>
+  <h1>Hello World</h1>
+  <!-- begin ad code -->
+  <script>
+  var bz_site = "https://www.yoursite.com";
+  var bz_width = 336;
+  var bz_height = 280;
+  var bz_type = "banner";
+  </script>
+  <script src="https://admin.revsense.com/assets/ads.js">
+  <!-- end ad code -->
+</body>
+</html>
