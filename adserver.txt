@@ -48,11 +48,15 @@ You can request an ad and put it in an iframe with the following path:
 
 Parameters:
 * type - banner | html | text.
-* r - rotation type: r=random, f=first in, l=last in, c=most popular clicks, v=most popular views
+* r - rotation type: r=random (default), f=first in, l=last in, c=most popular clicks, v=most popular views
 * u - user_id of person who create ads.
 * l - limit (default 1)
 
 Ad output is always Raw HTML
+
+Example:
+https://yoursite.com/adserver/banner?l=1&u=1234
+Would serve 1 banner ad randomly from a pool of ads for user_id 1234
 
 Ad Templates
 ------------
