@@ -54,6 +54,16 @@ Parameters:
 
 Ad output is always Raw HTML
 
+Ad Templates
+------------
+You can override system ad templates with
+templates using these permalinks:
+* ad_banner
+* ad_text
+* ad_html
+
+These templates will not render layouts, only the bare content of the template itself.
+
 TODO
 ====
 Additional "template" parameter, example "336x280" 
