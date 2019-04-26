@@ -1,0 +1,30 @@
+PARTIALS
+========
+
+Partials are small parts of templates that you can reuse in your code.
+
+Naming 
+------
+Partials should have a permalink without any leading slashes.
+Partials should also have a leading underscore:
+Examples:
+* _foo
+* _customer_list
+
+Gotchas
+-------
+It's not a great idea to let one partial call another partial.
+Also, don't have too many partials on a single page
+You'll take a huge performance hit.
+
+Example Use
+-----------
+
+<div>
+{% partial _customer_list %}
+</div>
+
+Context
+-------
+Partials will use all liquid variables available in the current
+context to help render their contents.
