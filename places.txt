@@ -32,3 +32,19 @@ Create a template with a permalink of "place"
 You can then control default ordering, limits, etc.
 A list of {{posts}} will be available to you
 as well as the {{post}} containing the place info.
+
+Importing City Data
+-------------------
+To automatically get a list of top city places, 
+add the setting to your site:
+* city1000
+* city5000
+* city15000
+
+You'll automatically get a list of 
+1000, 50000 or 15,000 cities, with permalinks
+like so:
+* /united-states
+* /united-states/florida
+* /united-states/florida/miami
+
