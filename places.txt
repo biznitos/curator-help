@@ -33,6 +33,9 @@ You can then control default ordering, limits, etc.
 A list of {{posts}} will be available to you
 as well as the {{post}} containing the place info.
 
+You will also get {{related_posts}} which are
+other places close by that you can use in the interface.
+
 Importing City Data
 -------------------
 To automatically get a list of top city places, 
@@ -47,4 +50,3 @@ like so:
 * /united-states
 * /united-states/florida
 * /united-states/florida/miami
-
