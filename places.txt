@@ -42,7 +42,7 @@ add the setting to your site:
 * city15000
 
 You'll automatically get a list of 
-1000, 50000 or 15,000 cities, with permalinks
+1000, 5000 or 15,000 cities, with permalinks
 like so:
 * /united-states
 * /united-states/florida
