@@ -25,3 +25,10 @@ Ordering
 By default the system will show closest posts to the place.
 If doing a full-text search, it will search within a default radius of 10km
 All other orderings are respected within the radius.
+
+Template
+--------
+Create a template with a permalink of "place"
+You can then control default ordering, limits, etc.
+A list of {{posts}} will be available to you
+as well as the {{post}} containing the place info.
