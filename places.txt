@@ -1,0 +1,27 @@
+Place Searches
+==============
+
+A place is just a post with:
+----------------------------
+type: "place"
+subtype: any text to filter posts with
+lat and lng (required)
+
+Posts that you want to display under posts, 
+need to have a type matching place.subtype
+
+Example
+-------
+Place:
+type: "place"
+subtype: "poi"
+
+Post:
+type: "poi"
+subtype: "bar"
+
+Ordering
+--------
+By default the system will show closest posts to the place.
+If doing a full-text search, it will search within a default radius of 10km
+All other orderings are respected within the radius.
