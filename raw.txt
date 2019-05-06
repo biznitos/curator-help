@@ -26,7 +26,7 @@ The content area is parsed any any available liquid variables are interpolated
 Parameters
 ----------
 * raw - [html|json]
-* u - the user's numeric ID
+* u - the user's numeric ID (user_site.id -- not core user's id)
 
 User Info
 ---------
