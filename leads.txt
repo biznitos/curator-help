@@ -18,6 +18,7 @@ Required fields:
 * customer[name] - name of the person filling the form
 
 Optional fields:
+* parent_user_id
 * subtype
 * utm_xxxx - UTM Tracking notification fields. (xxxx can be any or all of: source, campaign, medium, etc)
 * customer[phone]
@@ -45,8 +46,10 @@ Create a profile update form to deal with that.
 
 Lead Notificaiton:
 * notify
-a Post ID (zid) This makes it easy to make an email notification for the 
-author of a post. Example, a user can post some information, 
+* parent_user_id
+If a Post ID (zid) or parent_user_id is supplied,
+The involved user will receive an email notification for the 
+user or the author of the post. Example, a user can post some information, 
 then a lead can be captured based on it. An email notification will be 
 sent ot the author of the form with all the above fields captured.
 
