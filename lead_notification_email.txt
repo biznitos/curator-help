@@ -1,0 +1,72 @@
+LEAD NOTIFICATION TEMPLATE
+==========================
+
+Overview
+--------
+The lead notification template is sent out
+automatically from a site when a new lead
+is received.
+
+Sent from
+---------
+It's sent from the user who's information
+is in the lead. The recipient can just
+hit reply and send an email to this user.
+
+Recipient(s)
+------------
+There are 3 cases of recipients:
+
+1. If the lead had a "notify" hidden field
+containin the ID (zid) of a post, then the
+lead will be sent to that recipient.
+
+2. If the lead has a "parent_user_id" which
+is the user_site.id of a user, then that
+user will receive the notification
+
+3. Fallback will be to the email address
+of the site owner as indicated in the
+site settings.
+
+4. (TODO) If there is a "bcc" field, then
+additionally leads will be bcc'd to the
+email addresses in the bcc field (comma separated).
+
+Template
+--------
+The default template is "leads"
+You can override this template by
+creating a new email with the type permalink
+"emails/leads"
+
+Additionally you can create other templates
+that match the type of the lead:
+"emails/leads_[type]"
+example:
+"emails/leads_shopping"
+
+The system will always look for these templates
+first before the default template.
+
+Template Variables
+------------------
+Templates contain most of the same variables
+that are in the rest of the system:
+
+{{site}} -- site information
+{{post}} -- post information, if a "notify" id was added to the form
+{{parent}} -- the user who is references in the "parent_user_id" variable in the lead form
+{{lead}} -- the variables in the lead itself as follows:
+* id
+* zid
+* inserted_at
+* title
+* data - the data variable which containes data[xxxx] from the form
+* data.xxxx (example)
+* ip - ip address of the user
+* ua - user agent of the user
+* type - type of the lead
+* subtype - subtype of the lead
+* post - post of the lead
+* user - the user record of the person who created the leads
