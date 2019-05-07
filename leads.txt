@@ -21,7 +21,7 @@ Required fields:
 * customer[name] - name of the person filling the form
 
 Optional fields:
-* parent_user_id
+* parent_user_id (user_site.id of current user in site)
 * subtype
 * utm_xxxx - UTM Tracking notification fields. (xxxx can be any or all of: source, campaign, medium, etc)
 * customer[phone]
