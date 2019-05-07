@@ -9,6 +9,9 @@ Form Action:
 Method:
 POST
 
+Default template path:
+/go
+
 Required fields:
 * title
 * type
