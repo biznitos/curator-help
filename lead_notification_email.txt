@@ -70,3 +70,68 @@ that are in the rest of the system:
 * subtype - subtype of the lead
 * post - post of the lead
 * user - the user record of the person who created the leads
+
+
+Example Template
+----------------
+
+<html>
+<head><title>New Lead</title></head>
+<body style="font-family: Helvetica Neue, Arial, Helvetica, sans-serif; font-size: 17px;">
+  
+  <h4 style="font-weight: 200; font-size: 24px;">Lead Notification</h4>
+  
+  <p>
+    <b>Lead Type</b><br/>
+    {{type}}
+    {% if subtype.size > 0 %}
+    / {{subtype}}
+    {% endif %}    
+  </p>
+  
+  <p>
+    <b>Name</b><br/>
+    {{user.name}}
+  </p>
+  
+  <p>
+    <b>Email</b><br/>
+    {{user.email}}
+  </p>
+  
+  {% if user.phone.size > 0 %}
+  <p>
+    <b>Phone</b><br/>
+    {{user.phone}}
+  </p>
+  {% endif %}
+  
+  {% if data.size > 0 %}
+    {% for d in data %}
+    <p>
+      <b>{{d.key | capitalize}}</b><br/>
+      {{d.value}}
+    </p>         
+    {% endfor %}
+  {% endif %}  
+  
+  {% if place.size > 0 %}
+  <p>
+    <b>Location</b><br/>
+    {{place}}
+    {% if lat.size > 0 %}
+    <br/>
+    <img src="https://maps.googleapis.com/maps/api/staticmap?center={{lat}},{{lng}}&markers=color:red%7Clabel:C%7C{{lat}},{{lng}}&zoom=12&size=600x300" style="max-width: 600px;"/>
+    {% endif %}
+  </p>
+  {% endif %}
+  
+  <p>
+    <b>Date</b><br/>
+    {{inserted_at}}
+  </p>
+
+  <p>P.S. Just hit the reply button to reply</p>
+
+</body>
+</html>
