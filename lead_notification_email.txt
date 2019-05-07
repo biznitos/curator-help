@@ -79,7 +79,7 @@ Example Template
 <head><title>New Lead</title></head>
 <body style="font-family: Helvetica Neue, Arial, Helvetica, sans-serif; font-size: 17px;">
   
-  <h4 style="font-weight: 200; font-size: 24px;">Lead Notification</h4>
+  <h4 style="font-weight: 200; font-size: 24px;">{{type | capitalize}} Notification</h4>
   
   <p>
     <b>Lead Type</b><br/>
@@ -106,6 +106,7 @@ Example Template
   </p>
   {% endif %}
   
+  <!-- loop through the data[xxxx] items from your form --->
   {% if data.size > 0 %}
     {% for d in data %}
     <p>
@@ -115,6 +116,7 @@ Example Template
     {% endfor %}
   {% endif %}  
   
+  <!-- if used the special "location" field, show a map -->
   {% if place.size > 0 %}
   <p>
     <b>Location</b><br/>
@@ -126,6 +128,7 @@ Example Template
   </p>
   {% endif %}
   
+  <!-- date of lead submission -->
   <p>
     <b>Date</b><br/>
     {{inserted_at}}
