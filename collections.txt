@@ -6,12 +6,44 @@ Special tags bring collections into the current liquid contex.
 
 Leads
 -----
+Returns list of leads from the current site
+with specific filters.
 {% leads [options] %}
 
 Options:
 user_id - Leads with a a specific user_site.id 
+current_user - Leads for the currently logged in user, can be any value
 type - type of lead
 subtype - subtype of lead
 limit - how many records (default 10)
 
 Leads will always be ordered by most recently added first.
+
+Example - show last 10 leads for currently logged_in user:
+{% leads current_user:1, limit: 10 %}
+
+Example - show last 5 leads of type "open"
+{% leads type: "open", limit: 5 %}
+
+Posts
+-----
+Return list of posts from the current site
+with specific filters.
+{% posts [options] %}
+
+Options:
+user_id - Posts with a specific user_site.id
+current_user -- Posts for the currently logged in user, can be any value
+type - type of post
+subtype - subtype of post
+limit - how many posts to return
+order - how to sort posts ("updated", "alpha", "newest", "pubdate" - default: "pubdate")
+query - fulltext search string
+name - the name of the collection instead of "posts"
+
+Example - show most recently published 10 posts
+{% posts limit:10 %}
+
+Example - show posts ordered alphabetically and renamed to "alpha_posts"
+{% posts limit:10, order:"alpha", name:"alpha_posts" %}
+
