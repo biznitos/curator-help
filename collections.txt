@@ -1,0 +1,17 @@
+COLLECTIONS
+===========
+
+A collection can be a list of posts, users, leads, etc.
+Special tags bring collections into the current liquid contex.
+
+Leads
+-----
+{% leads [options] %}
+
+Options:
+user_id - Leads with a a specific user_site.id 
+type - type of lead
+subtype - subtype of lead
+limit - how many records (default 10)
+
+Leads will always be ordered by most recently added first.
