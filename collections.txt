@@ -47,3 +47,14 @@ Example - show most recently published 10 posts
 Example - show posts ordered alphabetically and renamed to "alpha_posts"
 {% posts limit:10, order:"alpha", name:"alpha_posts" %}
 
+Options
+-------
+When passing options, quotes are important
+
+"foo" - literal foo will be passed as an option
+foo (without quotes) will first lookup the value of foo in the global liquid context
+
+Example:
+"site.name" - will output literally "site.name"
+site.name - will output the name of the site, eg: "Biznitos"
+
