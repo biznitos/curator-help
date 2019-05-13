@@ -56,12 +56,29 @@ user or the author of the post. Example, a user can post some information,
 then a lead can be captured based on it. An email notification will be 
 sent ot the author of the form with all the above fields captured.
 
-Autoresponder:
+Autoresponder (to be deprecated):
 * autoresponder
 a Post ID (zid). This is good if you want to provide a download or some 
 other information that you want to immediately send to the user. 
 Prepare a post, with an external link to anything you want. 
 Once the lead is submitted, an email will be sent to the 
 submitter with anything you hve in the post.
+
+Autoresponder (new)
+To create an autoresponder for a lead, setup an email
+template with the permalink autoresponder_xxxx,
+where xxxx is the type of lead.
+example: "autoresponder_cleaning"
+
+In the Autoresponder template, 
+the following Liquid variables
+are available for use:
+{{xxxx}} -- system variables
+{{site}} -- site info
+{{lead}} -- the lead info
+{{lead.user}} -- user who submitted the lead
+{{lead.parent_user}} -- parent user of lead
+{{lead.parent_user_site}} -- parent user site info
+{{lead.post}} -- info from a given post zid
 
 Leads can be viewed in the Admin.
