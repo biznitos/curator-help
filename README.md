@@ -61,5 +61,16 @@ Information about your site is also available to use:
 * {{site.email}}
 * {{site.logo}}
 
+## Types of Templates
+You can create these kinds of Templates
+* Blank page - can be a CSS, JS, HTML or any kind of page with textual content
+* List of posts - A template that shows a list of posts you created in the content area
+* Single post - A template that shows a single post
+* Layout - A layout that wraps any of the above pages
+
+## File Manager
+You can upload files in the file manager and link to them in your HTML code.
+
+Please look at the documentation above for more about the kinds of variables available to you and all the features you can have.
 
 
