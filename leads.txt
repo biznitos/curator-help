@@ -60,9 +60,10 @@ Notifying multiple people:
 To notify a cohort of people, they must first have prepared posts 
 that match the type and subtype of the lead.
 These posts must also at least contain at least an email address.
-To switch on notification, include this variable in your form and set to any truthy value:
+To switch on notification, include this variable in your form 
+and set to the zid of a post that these posts are children of:
 * notify_all
-<input type="hidden" name="notify_all" value="1">
+<input type="hidden" name="notify_all" value="{{some_post_zid}}">
 
 Autoresponder (to be deprecated):
 * autoresponder
