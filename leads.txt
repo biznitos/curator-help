@@ -56,6 +56,14 @@ user or the author of the post. Example, a user can post some information,
 then a lead can be captured based on it. An email notification will be 
 sent ot the author of the form with all the above fields captured.
 
+Notifying multiple people:
+To notify a cohort of people, they must first have prepared posts 
+that match the type and subtype of the lead.
+These posts must also at least contain at least an email address.
+To switch on notification, include this variable in your form and set to any truthy value:
+* notify_all
+<input type="hidden" name="notify_all" value="1">
+
 Autoresponder (to be deprecated):
 * autoresponder
 a Post ID (zid). This is good if you want to provide a download or some 
