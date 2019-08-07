@@ -31,19 +31,21 @@ Return list of posts from the current site
 with specific filters.
 {% posts [options] %}
 
-Options:
-user_id - Posts with a specific user_site.id
-current_user -- Posts for the currently logged in user, can be any value
+>> Query Fields:
 type - type of post
 subtype - subtype of post
-limit - how many posts to return
-order - how to sort posts ("updated", "alpha", "newest", "pubdate" - default: "pubdate")
-query - fulltext search string
 id
 zid
 src
 src_id
 permalink
+parent_zid
+created_by
+
+>> Ordering, Naming & Limiting
+limit - how many posts to return
+order - how to sort posts ("updated", "alpha", "newest", "pubdate" - default: "pubdate")
+query - fulltext search string
 name - the name of the collection instead of "posts"
 one - truthy -- returns a single post not in an array
 
