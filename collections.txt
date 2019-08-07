@@ -39,6 +39,11 @@ subtype - subtype of post
 limit - how many posts to return
 order - how to sort posts ("updated", "alpha", "newest", "pubdate" - default: "pubdate")
 query - fulltext search string
+id
+zid
+src
+src_id
+permalink
 name - the name of the collection instead of "posts"
 one - truthy -- returns a single post not in an array
 
