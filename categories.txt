@@ -1,0 +1,14 @@
+CATEGORIES
+==========
+
+You can add a special type of content called categories to the system:
+
+1. Create a new post
+
+2. Set the type, subtype and titles as follows:
+* type = "category" (must always be "category")
+* subtype = [permalink of category]
+* title = [title of subcategory]
+
+That's it!
+(You thought it would be longer?)
