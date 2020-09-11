@@ -1,0 +1,41 @@
+AUTHENTICATION
+==============
+
+You can use the Revsense authentication system to login/signup with the following providers:
+
+* GOOGLE
+* FACEBOOK
+* EMAIL
+
+GOOGLE
+------
+GET URL:
+/auth/google
+
+FACEBOOK
+--------
+GET URL:
+/auth/facebook
+
+EMAIL
+-----
+POST OR GET URL:
+/auth/email
+
+PARAMETERS
+----------
+* return_url (optional - default "/")
+Where to go after a successful login. You should URL encode this
+
+* failure_url (optional - default "/")
+Where to go after the login has failed. You should URL encode this
+
+* email (required for email authentication)
+Only used for optional email type authentication
+
+HOW IT WORKS
+------------
+After hitting the URL's with the optional parameters, the system will add or login the user, and return to the appropriate return url area.
+
+In all cases, if a new account is being created, the user will need to enter some additional information or confirm the information before going forward.
+
