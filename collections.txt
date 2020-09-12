@@ -16,6 +16,7 @@ current_user - Leads for the currently logged in user, can be any value
 type - type of lead
 subtype - subtype of lead
 limit - how many records (default 10)
+type - one of the statuses "pending", etc
 
 Leads will always be ordered by most recently added first.
 
