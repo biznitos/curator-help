@@ -49,6 +49,7 @@ order - how to sort posts ("updated", "alpha", "newest", "pubdate" - default: "p
 query - fulltext search string
 name - the name of the collection instead of "posts"
 one - truthy -- returns a single post not in an array
+status - show posts with status (default: "published", "unpublished", "all")
 
 Example - show most recently published 10 posts
 {% posts limit:10 %}
