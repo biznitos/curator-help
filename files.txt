@@ -1,0 +1,38 @@
+UPLOADING FILES
+===============
+
+You can upload a file to be attached to an entity.
+
+PATH
+/api/file/v1
+
+METHOD
+POST
+
+PARAMETERS
+* files[] - The uploaded files. Can be multiple or single, but must be named "files[]"
+* type - Proper values are: "Post", "User", "Lead"
+* zid - src_id is the ZID of the item you are attaching the files to 
+* user_id (optional)
+* return_url - where to go after successful upload
+* failure_url - where to go after upload failed
+
+Example form would look like
+
+<form method="POST" action="/api/file/v1" enctype="multipart/form-encoding">
+ <!-- its for a post -->
+ <input type="hidden" name="type" value="Post">
+ 
+ <!-- zid: example, attach some files to the current post displayed -->
+ <input type="hidden" name="zid" value="{{post.zid}}">
+ 
+ <!-- user_id: example, the currently logged in user -->
+ <input type="hidden" name="user_id" value="{{user.id}}">
+ 
+ <!-- the actual upload field -->
+ <label>Attach some photos</label>
+ <input type="file" name="files[]" multiple="true" accept="image/*">
+ 
+ <button>Upload</button>
+ 
+</form>
