@@ -36,3 +36,16 @@ Example form would look like
  <button>Upload</button>
  
 </form>
+
+
+DELETING UPLOADED FILES
+=======================
+
+PATH
+/api/file/v1/:zid
+
+METHOD
+GET
+
+Example:
+<a href="/api/file/v1/{{file.zid}}" class="confirm">Delete file</a>
