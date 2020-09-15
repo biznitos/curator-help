@@ -1,0 +1,10 @@
+META TAGS
+=========
+
+You can automatically inject certain meta tags into your HTML head as follows
+
+* noindex
+{% assign noindex = true %}
+Will put into the header:
+<meta name="robots" content="noindex">
+
