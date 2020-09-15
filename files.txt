@@ -45,7 +45,11 @@ PATH
 /api/file/v1/:zid
 
 METHOD
-GET
+DELETE
 
 Example:
-<a href="/api/file/v1/{{file.zid}}" class="confirm">Delete file</a>
+<form method="DELETE" action="/api/file/v1">
+  <input type="hidden" name="method" value="_delete">
+  <input type="hidden" name="zid" value="{{file.zid}}">
+  <button>Delete file</button>
+</form>
