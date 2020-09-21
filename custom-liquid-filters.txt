@@ -38,3 +38,12 @@ markdown
 Converts some text into markdown magically!
 Example
 {{post.content | markdown}} -> "<p>Some text with html markup</p>"
+
+html_encode
+-----------
+Encode a string to html entities
+{{"<< KAPOW!! >>" | html_encode}} --> "&lt;&lt; KAPOW!! &gt;&gt;"
+
+html_decode
+Decodes some HTML entities to normal string
+{{"&#161;Ay, caramba!" | html_decode}} --> "¡Ay, caramba!"
