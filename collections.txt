@@ -33,7 +33,7 @@ with specific filters.
 {% posts [options] %}
 
 >> Query Fields:
-type - type of post
+type - type of post (can be list of types separated by commas, example: "foo,bar,brah")
 subtype - subtype of post
 id
 zid
