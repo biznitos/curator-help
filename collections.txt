@@ -45,7 +45,7 @@ created_by
 
 >> Ordering, Naming & Limiting
 limit - how many posts to return
-order - how to sort posts ("updated", "alpha", "newest", "pubdate" - default: "pubdate")
+order - how to sort posts ("updated", "alpha", "newest", "pubdate", "oldest", "type", "subtype" - default: "pubdate")
 query - fulltext search string
 name - the name of the collection instead of "posts"
 one - truthy -- returns a single post not in an array
