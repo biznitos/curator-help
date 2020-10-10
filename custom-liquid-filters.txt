@@ -48,3 +48,7 @@ html_decode
 -----------
 Decodes some HTML entities to normal string
 {{"&#161;Ay, caramba!" | html_decode}} --> "¡Ay, caramba!"
+
+json_encode
+-----------
+Converts a map (hash) into a JSON string
