@@ -17,6 +17,8 @@ type - type of lead
 subtype - subtype of lead
 limit - how many records (default 10)
 type - one of the statuses "pending", etc
+zid - zid of a specific lead
+one - gets only one lead - truthy
 
 Leads will always be ordered by most recently added first.
 
