@@ -1,0 +1,42 @@
+RUNNER
+======
+
+Can run code at a URL point for custom functionality in the system.
+
+Two ways to do this:
+
+Liquid tags
+-----------
+{% runner permalink:"some_code", foo:1, bar:"2", zee:params.id, name:"some_name" %}
+
+Will return {{runner}} or {{some_name}}, which can be numeric, map, list, binary.
+
+URL Endpoint
+------------
+Verbs:
+GET/POST/PUT/PATCH
+
+Path:
+/xr/:permalink
+
+In your runner, you return:
+
+To redirect after the work:
+{:redirect, "https://someurl"}
+
+To spit out JSON (good for ad-hoc API's):
+{:json, %{foo: 1}}
+
+Spit out text:
+{:text, "hello world"}
+
+Spit out HTML:
+{:html, "<h1>hello world</h1>"}
+
+Fully render a template with associated layout and included context:
+{:render, {"/home", %{foo: 1, bar: "2"}}}
+
+Send a download with a given filename:
+{:download, {"some binary content", "file.txt"}}
+
+Only enhanced admins can create and edit runners.
