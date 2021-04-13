@@ -15,6 +15,7 @@ Parameters:
   to_email: "customer@gmail.com",
   user_id: the ID of the customer,
   site_id: the ID of your site site.id,
+  subject: "My fun email",
   context: %{... variables to go in the context of your email ...}
 }
 
