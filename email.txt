@@ -1,0 +1,20 @@
+SENDING EMAILS
+==============
+
+You can send email in Elixir code runners.
+
+Module
+------
+Emailer.deliver(template_id, params)
+
+Parameters:
+* template_id - the ID of a template in Postmark
+* params: %{
+  from_name: "Your site name",
+  from_email: "info@mysite.com",
+  to_email: "customer@gmail.com",
+  user_id: the ID of the customer,
+  site_id: the ID of your site site.id,
+  context: %{... variables to go in the context of your email ...}
+}
+
