@@ -1,7 +1,7 @@
 RUNNER
 ======
 
-Can run code at a URL point for custom functionality in the system.
+Can run code for custom functionality in the system.
 
 Two ways to do this:
 
