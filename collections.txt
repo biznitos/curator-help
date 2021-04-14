@@ -11,8 +11,7 @@ with specific filters.
 {% leads [options] %}
 
 Options:
-user_id - Leads with a a specific user_site.id 
-current_user - Leads for the currently logged in user, can be any value
+user_id - Leads with a a specific user_site.id (otherwise shows for currently logged in user)
 type - type of lead
 subtype - subtype of lead
 limit - how many records (default 10)
