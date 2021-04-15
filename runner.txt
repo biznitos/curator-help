@@ -40,3 +40,18 @@ Send a download with a given filename:
 {:download, {"some binary content", "file.txt"}}
 
 Only enhanced admins can create and edit runners.
+
+ENVIRONMENT
+-----------
+
+In the URL endpoint runner, the params variable contains:
+params[:conn]
+params[:site]
+params[:user_site] (if available)
+params["xxxx"] - everything else that was passed in by the user
+
+In the Liquid runner, the params variable contains
+params[:context] - the liquid context
+params[:site]
+params[:user_site] (if available)
+params["xxxxx"] - everything else that was passed in with the liquid tag
