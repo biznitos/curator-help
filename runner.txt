@@ -11,7 +11,7 @@ Liquid tags
 
 Will return {{runner}} or {{some_name}}, which can be numeric, map, list, binary.
 
-URL Endpoint
+HTTP Runner URL
 ------------
 Verbs:
 GET/POST/PUT/PATCH
@@ -19,6 +19,14 @@ GET/POST/PUT/PATCH
 Path:
 /xr/:permalink
 
+CRON Runner
+-----------
+Runners can be run by CRON, but they will be run in the admin, not on the web application.
+So this means certain modules are not available, or have the names changed according
+to what is on the server.
+
+RETURN from Runners
+-------------------
 In your runner, you return:
 
 To redirect after the work:
@@ -41,6 +49,7 @@ Send a download with a given filename:
 
 Runners from CRON can output something else like:
 {:ok, %{foo: :bar}}
+{:ok, "5 Sites found!"}
 
 Runners from CRON will take second element in the tuple - elem(1)
 This will be store in the admin so you can see the last run time
