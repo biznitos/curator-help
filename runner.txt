@@ -39,6 +39,13 @@ Fully render a template with associated layout and included context:
 Send a download with a given filename:
 {:download, {"some binary content", "file.txt"}}
 
+Runners from CRON can output something else like:
+{:ok, %{foo: :bar}}
+
+Runners from CRON will take second element in the tuple - elem(1)
+This will be store in the admin so you can see the last run time
+and the last output. Good for debugging.
+
 Only enhanced admins can create and edit runners.
 
 ENVIRONMENT
