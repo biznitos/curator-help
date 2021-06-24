@@ -3,7 +3,7 @@ RUNNER
 
 Can run code for custom functionality in the system.
 
-Two ways to do this:
+Three ways to do this:
 
 Liquid tags
 -----------
@@ -12,7 +12,7 @@ Liquid tags
 Will return {{runner}} or {{some_name}}, which can be numeric, map, list, binary.
 
 HTTP Runner URL
-------------
+---------------
 Verbs:
 GET/POST/PUT/PATCH
 
