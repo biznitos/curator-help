@@ -21,9 +21,8 @@ Path:
 
 CRON Runner
 -----------
-Runners can be run by CRON, but they will be run in the admin, not on the web application.
-So this means certain modules are not available, or have the names changed according
-to what is on the server.
+Runners can be run by CRON, the will run in the context of the web appliction
+so all the modules available on CuratorWeb will be useable.
 
 RETURN from Runners
 -------------------
