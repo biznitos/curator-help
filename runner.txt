@@ -21,8 +21,8 @@ Path:
 
 CRON Runner
 -----------
-Runners can be run by CRON, the will run in the context of the web appliction
-so all the modules available on CuratorWeb will be useable.
+Runners can be run by CRON, they will run in the context of the web appliction
+so all the modules and applications in CuratorWeb will be available.
 
 RETURN from Runners
 -------------------
