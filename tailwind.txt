@@ -1,0 +1,33 @@
+TAILWIND CSS
+============
+
+Tailwind is a modern CSS Framework that we encourage everyone to use on our platform:
+https://tailwindcss.com
+
+We can incorporate a production build of Tailwind by looking at all of your templates and generating a minified stripped down tailwind.
+
+DEVELOPMENT MODE
+----------------
+To use the very latest version of tailwind in development mode, use this url in the CSS Include:
+
+URL:
+/tailwind.css
+
+This will automatically make available a full non-minified version of tailwind for you to use and do your dev with.
+
+We keep this Version of tailwind up-to-date.
+
+PRODUCTION MODE
+---------------
+To use tailwind that's stripped down based on the styles in your templats, use this url in your CSS Include:
+
+URL:
+/tailwind.min.css
+
+This will automatically make available a cut down minimized version of tailwind for you to use.
+This version is built every few minutes based on changes in your templates.
+
+NOTES
+=====
+The builder will be triggered so long as you have a CSS include that uses either tailwind.css or tailwind.min.css in your layout files.
+
