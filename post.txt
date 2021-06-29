@@ -1,5 +1,37 @@
-POST ATTRIBUTES
-===============
+POST CAPTURE FORM
+=================
+
+You can create a new post on any page by preparing a form with these attributes.
+
+Form Action:
+/api/post/v1
+
+Method:
+POST
+
+Required Fields
+* title
+* type
+* return_url - The URL to go to when the lead form is successful
+* failure_url - The URL to return to when the lead form failed
+* customer[email] - email address of the person filling this form (if person is logged in, not needed)
+* customer[name] - name of the person filling the form (if person is logged in, not needed)
+
+NOTE:
+Customer[xxxxxx] information will only be added once. 
+If the customer already exists in the system, this information 
+will not overwrite what's already there. 
+Create a profile update form to deal with that.
+If the person is already logged into the site, these will be ignored.
+
+ADDITIONAL NOTES:
+* cover_image (an upload field with the main image for the post)
+* pubdate = "now" (will publish the post -- don't do this unless you really want to)
+
+
+
+LIST OF ALL FIELDS
+==================
 
 A full list of attributes for each post
 
