@@ -6,23 +6,24 @@ https://tailwindcss.com
 
 We can incorporate a production build of Tailwind by looking at all of your templates and generating a minified stripped down tailwind.
 
-DEVELOPMENT MODE
-----------------
-To use the very latest version of tailwind in development mode, use this url in your CSS Include:
+SETUP DEVELOPMENT MODE
+----------------------
+To use the full version of Tailwind in your layout, use from the Tailwind CDN in your layouts:
 
-URL:
-/css/tailwind.css
+STYLESHEET:
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
-This will automatically make available a full non-minified version of tailwind for you to use and do your dev with.
+Then create an empty CSS file at this path:
+/css/tailwind.min.css
 
-We keep this Version of tailwind up-to-date.
+This empty file will later be automatically populated with your Tailwind CSS classes you use in your templates.
 
 PRODUCTION MODE
 ---------------
-To use tailwind that's stripped down based on the styles in your templates, use this url in your CSS Include:
+When you're ready for production, use this tailwind that's stripped down and ready for production in place of the Development version:
 
-URL:
-/css/tailwind.min.css
+STYLESHEET:
+<link href="/css/tailwind.min.css" rel="stylesheet">
 
 This will automatically make available a production version of tailwind for you to use.
 This version only contains the styles used in your templates.
@@ -31,5 +32,5 @@ You can also explicitly force a build from the admin.
 
 NOTES
 =====
-The watcherr will be triggered if you have a CSS file: /tailwind.min.css in your templates.
+The watcher will ONLY be triggered for your site if you have a CSS file: /css/tailwind.min.css in your templates.
 
