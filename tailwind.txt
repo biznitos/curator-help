@@ -13,10 +13,12 @@ To use the full version of Tailwind in your layout, use from the Tailwind CDN in
 STYLESHEET:
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
-Then create an empty CSS file at this path:
+Then create an empty CSS file in your templates:
 /css/tailwind.min.css
 
-This empty file will later be automatically populated with your Tailwind CSS classes you use in your templates.
+This file will later be automatically populated with your Tailwind CSS classes you use in your templates.
+
+Do not add anything in this file, as it will be replaced with the tailwind production build.
 
 PRODUCTION MODE
 ---------------
