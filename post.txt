@@ -27,6 +27,7 @@ If the person is already logged into the site, these will be ignored.
 ADDITIONAL NOTES:
 * cover_image (an upload field with the main image for the post)
 * pubdate = "now" (will publish the post -- don't do this unless you really want to)
+* files[] (a list of files that you want to attach to the post -- typically images, but can be any kind of file)
 
 
 
@@ -71,6 +72,7 @@ MEDIA
 -----
 * cover_image 
 * cover_video
+* files[] (alias: photos[])
 
 DATES
 -----
