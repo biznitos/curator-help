@@ -36,3 +36,15 @@ NOTES
 =====
 The watcher will ONLY be triggered for your site if you have a CSS file: /css/tailwind.min.css in your templates.
 
+TAILWIND CONFIG FILE
+====================
+By default we have a "tailwind.config.js" file with the following plugins
+
+* @tailwindcss/typography
+* @tailwindcss/forms
+* @tailwindcss/line-clamp
+* @tailwindcss/aspect-ratio
+
+If you want to configure this file, please create a new one in the templates with that exact permalink name.
+
+Then you can edit the tailwind file to include other third party plugins or tailwind options.
