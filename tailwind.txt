@@ -12,6 +12,7 @@ To use the full version of Tailwind in your layout, use from the Tailwind CDN in
 
 STYLESHEET:
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+(you can also include some tailwind plugins like forms, etc as well this way)
 
 Then create an empty CSS file in your templates:
 /css/tailwind.min.css
@@ -36,15 +37,11 @@ NOTES
 =====
 The watcher will ONLY be triggered for your site if you have a CSS file: /css/tailwind.min.css in your templates.
 
-TAILWIND CONFIG FILE
-====================
-By default we have a "tailwind.config.js" file with the following plugins
+TAILWIND PLUGINS
+================
+The following official tailwind plugins are included in your production build:
 
 * @tailwindcss/typography
 * @tailwindcss/forms
 * @tailwindcss/line-clamp
 * @tailwindcss/aspect-ratio
-
-If you want to configure this file, please create a new one in the templates with that exact permalink name.
-
-At this time, only the above plugins are supported.
