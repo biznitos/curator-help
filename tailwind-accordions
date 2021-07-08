@@ -1,0 +1,47 @@
+JAVSCRIPT
+=========
+$('body').on('click', '.accordion-title', function() {
+  $('body .accordion-body').hide();
+  $('body').find('.accordion-item').removeClass('bg-green-200 border-green-200');
+  $('body').find('.accordion-item').addClass('bg-gray-100 border-gray-100');
+
+  $($(this).closest('.accordion-item')).find('.accordion-body').show();
+  $(this).closest('.accordion-item').addClass('bg-green-200 border-green-200');
+  return false;
+});
+
+
+HTML
+====
+<!-- accordion -->
+<div class="accordion-item border border-green-200 bg-green-200 mb-4">
+  <a href="#" class="accordion-title block p-2">
+    <span class="float-right">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </span>
+    <span class="text-black">Customer Information</span>
+  </a>
+  <div class="accordion-body border-t p-2 bg-white">
+    the content itself
+  </div>
+</div>
+<!-- /accordion -->
+
+<!-- accordion -->
+<div class="accordion-item border bg-gray-100 mb-4">
+  <a href="#" class="accordion-title block p-2">
+    <span class="float-right">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </span>
+    <span class="text-black">Newsletters</span>
+  </a>
+  <div class="accordion-body border-t p-2 bg-white hidden">
+    the content itself
+  </div>
+</div>
+<!-- /accordion -->
+
