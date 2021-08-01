@@ -16,12 +16,12 @@ To display a username, you have to create a template with the permalink "user".
 Template Variables:
 In the template, the following liquid data will exists:
 
-* {{user}}
-* {{user.username}}
-* {{user.zid}}
-* {{user.role}}
-* {{user.data}} (map)
-* {{user.notes}}
-* {{user.usubscribed}} (boolean)
-* {{user.user.all-user-fields}} (read page on user fields)
+* {{member.id}} (the user_id of this user)
+* {{member.username}}
+* {{member.zid}}
+* {{member.role}}
+* {{member.data}} (map)
+* {{member.notes}}
+* {{member.usubscribed}} (boolean)
+* {{member.user.all-user-fields}} (read page on user fields)
 
