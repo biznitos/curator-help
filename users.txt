@@ -28,3 +28,22 @@ In the template, the following liquid data will exists:
 IMPORTANT
 =========
 We do not use the {{user}} variable, since this is reserved for the currently logged in user.
+
+FOLLOW
+======
+You can follow a user if currently logged in:
+
+URL:
+/api/follow/v1
+
+Parameters:
+username -- the username of the user to follow. Must be a member of the current site.
+return_url -- where to redirect to
+failure_url -- where to redirect to on failure
+
+Return JSON: (if no return_url or failure_url provided)
+{"status": boolean, "message": "Some message if error"} 
+
+Redirects:
+to the return_url (if one is provided)
+to the failure_url (if one is provided)
