@@ -7,7 +7,8 @@ Example:
 "https://yoursite.com/user/skylar"
 
 Notes:
-When you create an account on the site, you're assigned a random username. You can change this later.
+Users are assigned a random username upon creation. 
+They can change this on the account update page "/account".
 
 Templates:
 To display a username, you have to create a template with the permalink "user".
