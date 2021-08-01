@@ -1,0 +1,26 @@
+USERS
+=====
+
+Curator comes with a built in public user page.
+
+Example:
+"https://yoursite.com/user/skylar"
+
+Notes:
+When you create an account on the site, you're assigned a random username. You can change this later.
+
+Templates:
+To display a username, you have to create a template with the permalink "user".
+
+Template Variables:
+In the template, the following liquid data will exists:
+
+* {{user}}
+* {{user.username}}
+* {{user.zid}}
+* {{user.role}}
+* {{user.data}} (map)
+* {{user.notes}}
+* {{user.usubscribed}} (boolean)
+* {{user.user.all-user-fields}} (read page on user fields)
+
