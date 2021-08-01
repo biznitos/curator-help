@@ -25,3 +25,6 @@ In the template, the following liquid data will exists:
 * {{member.usubscribed}} (boolean)
 * {{member.user.all-user-fields}} (read page on user fields)
 
+IMPORTANT
+=========
+We do not use the {{user}} variable, since this is reserved for the currently logged in user.
