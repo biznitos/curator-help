@@ -28,9 +28,8 @@ CORE USER INFO
 
 SITE SPECIFIC USER INFO
 -----------------------
-* data[xxx] (eg: data[phone], data[url]....)
-* utm_xxxx parameters
-* role (default "customer" -- cannot be changed)
+* username (unique for this site only. usernames that conflict will silently be ignored)
+* data[xxx] (good for site specific settings for this user)
 
 CONTROL PARAMETERS
 ------------------
