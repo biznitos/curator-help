@@ -29,7 +29,10 @@ ADDITIONAL NOTES:
 * pubdate = "now" (will publish the post -- don't do this unless you really want to)
 * files[] (a list of files that you want to attach to the post -- typically images, but can be any kind of file)
 
-
+ADDITIONAL ADDITIONAL NOTES:
+return_url 
+You can add an :id, :zid, or :permlaink in the return_url template.
+Example: "/foo?id=:id"
 
 LIST OF ALL FIELDS
 ==================
