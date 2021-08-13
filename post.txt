@@ -34,6 +34,12 @@ return_url
 You can add an :id, :zid, or :permlaink in the return_url template.
 Example: "/foo?id=:id"
 
+NEW POST NOTIFICATION
+=====================
+You can send a generic email notification when a new post has been created.
+Add the hidden (or other) field:
+* notify (single email address to send notification)
+
 LIST OF ALL FIELDS
 ==================
 
