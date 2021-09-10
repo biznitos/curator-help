@@ -31,8 +31,8 @@ ADDITIONAL NOTES:
 
 ADDITIONAL ADDITIONAL NOTES:
 return_url 
-You can add an :id, :zid, or :permlaink in the return_url template.
-Example: "/foo?id=:id"
+You can add an __id__, __zid__, or __permlaink__ in the return_url template.
+Example: "/foo?id=__id__"
 
 NEW POST NOTIFICATION
 =====================
