@@ -4,7 +4,7 @@ COLLECTIONS
 A collection can be a list of posts, users, leads, etc.
 Special tags bring collections into the current liquid contex.
 
-Leads
+LEADS
 -----
 Returns list of leads from the current site
 with specific filters.
@@ -27,7 +27,25 @@ Example - show last 10 leads for currently logged_in user:
 Example - show last 5 leads of type "open"
 {% leads type: "open", limit: 5 %}
 
-Posts
+TYPES
+-----
+Return list of types and subtypes that has content filtered by some kind of criteria
+{% types [options] %}
+
+Options:
+type: filtered by a type
+subtype: filtered by a subtype
+name: the name of the collection instead of "types"
+
+This will always return published types.
+
+Example:
+{% types subtype: "car", name: "car_types" %}
+
+Returns:
+[ %{type: "foo", subtype: nil}, %{type: "bar", subtype: "foobar"}, ... ]
+
+POSTS
 -----
 Return list of posts from the current site
 with specific filters.
