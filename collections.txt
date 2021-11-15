@@ -61,6 +61,7 @@ src_id
 permalink
 parent_zid
 created_by
+tag
 
 >> Ordering, Naming & Limiting
 limit - how many posts to return
@@ -78,6 +79,9 @@ Example - show posts ordered alphabetically and renamed to "alpha_posts"
 
 Example - returns a single post and calls it "blog" in the context
 {% posts zid: "12345..", name: "blog" %}
+
+Example - Return some posts containing the text anywhere in the tag field
+{% posts tag: "trump" %}
 
 Options
 -------
