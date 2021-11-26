@@ -20,9 +20,8 @@ Required fields:
 * customer[email] - email address of the person filling this form
 * customer[name] - name of the person filling the form
 
-Payment related fields
-* payment_type - paypal,stripe,link (only if already setup)
-* payment_amount - 9.99 (in currency of website) -- WE NEED BETTER WAY TO DO THIS
+Payment related fields (This will then go through the payment flow)
+* payment_zid - ZID of form containing product information
 
 Optional fields:
 * parent_user_id (user_site.id of current user in site)
