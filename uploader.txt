@@ -1,0 +1,27 @@
+UPLOADER
+--------
+
+Implement a file uploading service
+
+Definining
+----------
+You can define an uploader by creating a template as follows:
+
+permalink format:
+[upload]-[type]-[subtype]
+
+Example:
+upload-service-cleaning
+
+Formatting
+----------
+Each line represents a file that is required to be uploaded in this format:
+
+[title]|[mime-format]|filename to be stored
+
+Example:
+Upload your passport|image/*,application/pdf|passport.pdf
+
+Example:
+Upload your passport|*|passport.pdf
+
