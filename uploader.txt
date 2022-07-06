@@ -8,20 +8,23 @@ Definining
 You can define an uploader by creating a template as follows:
 
 permalink format:
-[upload]-[type]-[subtype]
+uploader-[slug]
 
 Example:
-upload-service-cleaning
+uploader-cleaning
 
 Formatting
 ----------
 Each line represents a file that is required to be uploaded in this format:
 
-[title]|[mime-format]|filename to be stored
+title|filename|accept-mime-type|example-file-url
 
 Example:
-Upload your passport|image/*,application/pdf|passport.pdf
+Upload your passport|filename|image/*,application/pdf|https://upload.wikimedia.org/wikipedia/commons/0/0d/Biodata_page_of_Singapore_Passport.jpg
 
-Example:
-Upload your passport|*|passport.pdf
+Notes
+-----
+THe examile-file-url can be blank
+
+The title of the template will be shown on the upload screen.
 
