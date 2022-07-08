@@ -17,10 +17,10 @@ Formatting
 ----------
 Each line represents a file that is required to be uploaded in this format:
 
-title|filename|accept-mime-type|example-file-url
+title|filename|extensions|example-file-url
 
 Example:
-Upload your passport|filename|image/*,application/pdf|https://upload.wikimedia.org/wikipedia/commons/0/0d/Biodata_page_of_Singapore_Passport.jpg
+Upload your passport|filename|.jpg,.jpeg,.png|https://upload.wikimedia.org/wikipedia/commons/0/0d/Biodata_page_of_Singapore_Passport.jpg
 
 Notes
 -----
@@ -28,3 +28,9 @@ THe examile-file-url can be blank
 
 The title of the template will be shown on the upload screen.
 
+Extensions are of the form:
+.png
+.jpg
+.pdf
+.doc
+etc
