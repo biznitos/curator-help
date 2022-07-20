@@ -11,9 +11,13 @@ To add something to the cart, create a link like this:
 
 <a href="#" class="cart-add" data-id="{{post.id}}">Add to Cart</a>
 
+To add something to the cart with a specif quantity:
+
+<a href="#" class="cart-add" data-id="{{post.id}}" data-quantity="5">Add to Cart</a>
+
 To indicate something is already in the cart there will be an existing variable:
 
-{{post.in_cart}}
+{{post.in_cart}} (has count of this items in the cart). Null/0 if none.
 
 So to show items already in cart:
 
@@ -50,5 +54,5 @@ When a cart is submitted, the lead notification will have all the details.
 
 CRM
 ---
-You can view the full order in the CRM
+You can view the full order in the CRM with the invoice
 
