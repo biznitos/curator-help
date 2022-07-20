@@ -1,0 +1,54 @@
+SHOPPING CART
+-------------
+
+The shopping cart experience allows the visit to add many posts to a cart and then check them out into a lead later.
+There will be a lead notification sent with the content of the cart.
+It operates almost exactly like a lead.
+
+ADD TO CART
+-----------
+To add something to the cart, create a link like this:
+
+<a href="#" class="cart-add" data-id="{{post.id}}">Add to Cart</a>
+
+To indicate something is already in the cart there will be an existing variable:
+
+{{post.in_cart}}
+
+So to show items already in cart:
+
+<a href="#" class="cart-add" data-id="{{post.id}}">Add to Cart ({{post.items_in_cart}})</a>
+
+SHOW CART INDICATOR
+-------------------
+To show a cart icon and the number of items in the cart, 
+create a container that the system will automatically populate with the cart link and count.
+
+<span id="cart"></span>
+
+By default, this will be populated with markup that looks like this:
+
+<a href="/cart"><img src="/images/cart.png"><span>5</span></a>
+
+You can change the markup by setting some javascript.
+<script>
+  var cart_markup = '<a href="/cart"><img src="/images/cart.png"><span>##CARTNUM##</span></a>';
+</script>
+
+CHECKOUT PAGE
+-------------
+The checkout page is just a template automatically populated with the cart contents.
+
+Permalink:
+/cart
+
+You can create a new template with the same name and you will see the markup that you can edit.
+
+LEAD NOTIFICATION
+-----------------
+When a cart is submitted, the lead notification will have all the details.
+
+CRM
+---
+You can view the full order in the CRM
+
