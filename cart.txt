@@ -24,7 +24,7 @@ SHOW CART INDICATOR
 To show a cart icon and the number of items in the cart, 
 create a container that the system will automatically populate with the cart link and count.
 
-<span id="cart"></span>
+<span id="revsense_cart"></span>
 
 By default, this will be populated with markup that looks like this:
 
@@ -32,7 +32,7 @@ By default, this will be populated with markup that looks like this:
 
 You can change the markup by setting some javascript.
 <script>
-  var cart_markup = '<a href="/cart"><img src="/images/cart.png"><span>##CARTNUM##</span></a>';
+  var revsense_cart_markup = '<a href="/cart"><img src="/images/cart.png"><span>##CARTNUM##</span></a>';
 </script>
 
 CHECKOUT PAGE
