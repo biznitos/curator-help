@@ -90,13 +90,13 @@ Permalink:
 /cart
 
 You can create a new template with the same name and you will see the markup that you can edit.
-
 However, you can create any permalink.
 
 
 LEAD NOTIFICATION
 -----------------
 When a cart is submitted, the lead notification will have all the details.
+An invoice will also be created that will have the order.
 
 CRM
 ---
