@@ -52,6 +52,11 @@ However, you can create any permalink.
 
 A cart is just a more complex lead form that will also create an invoice. Please refer to the lead documentation to see additional form fields needed to create an invoice with a lead.
 
+The folloiwng fields are added to the lead form:
+
+invoice[0][post_id]
+invoice[0][quantity]
+
 LEAD NOTIFICATION
 -----------------
 When a cart is submitted, the lead notification will have all the details.
