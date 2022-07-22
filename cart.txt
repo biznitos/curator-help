@@ -48,6 +48,10 @@ Permalink:
 
 You can create a new template with the same name and you will see the markup that you can edit.
 
+However, you can create any permalink.
+
+A cart is just a more complex lead form that will also create an invoice. Please refer to the lead documentation to see additional form fields needed to create an invoice with a lead.
+
 LEAD NOTIFICATION
 -----------------
 When a cart is submitted, the lead notification will have all the details.
