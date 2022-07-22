@@ -5,6 +5,26 @@ The shopping cart experience allows the visit to add many posts to a cart and th
 There will be a lead notification sent with the content of the cart.
 It operates almost exactly like a lead.
 
+ENABLE CART FUNCTIONALITY
+-------------------------
+To enable shopping cart functionality on your site, you need to show the 
+shopping cart icon container on a minimum of the product page and the checkout page.
+
+Create a container that the system will automatically populate with the cart link and count.
+
+<span id="revsense_cart"></span>
+
+By default, this will be populated with markup that looks like this:
+
+<a href="/cart"><img src="/images/cart.png"><span>5</span></a>
+
+You can change the markup by setting some javascript.
+<script>
+  var revsense_cart_markup = '<a href="/cart"><img src="/images/cart.png"><span>##CARTNUM##</span></a>';
+</script>
+
+By default the checkout page is at "/cart", but you can make this anything you like.
+
 ADD TO CART
 -----------
 To add something to the cart, create a link like this:
@@ -23,21 +43,44 @@ So to show items already in cart:
 
 <a href="#" class="cart-add" data-id="{{post.id}}">Add to Cart ({{post.items_in_cart}})</a>
 
-SHOW CART INDICATOR
--------------------
-To show a cart icon and the number of items in the cart, 
-create a container that the system will automatically populate with the cart link and count.
+REMOVE FROM CART
+----------------
+To remove something from the cart, you need markup like this:
 
-<span id="revsense_cart"></span>
+<a href="#" class="cart-delete" data-id="{{post.id}}">Remove</a>
 
-By default, this will be populated with markup that looks like this:
+DECREMENT QUANTITY
+------------------
+To decrement the quantity of an item in the cart, you need markup like this:
 
-<a href="/cart"><img src="/images/cart.png"><span>5</span></a>
+<a href="#" class="cart-dec" data-id="{{post.id}}">-</a>
 
-You can change the markup by setting some javascript.
-<script>
-  var revsense_cart_markup = '<a href="/cart"><img src="/images/cart.png"><span>##CARTNUM##</span></a>';
-</script>
+DECREMENT QUANTITY
+------------------
+To increase the quantity of an item in the cart, you need markup like this:
+
+<a href="#" class="cart-inc" data-id="{{post.id}}">+</a>
+
+LIQUID CART VARIABLES
+---------------------
+Once any items are in the cart, there will exist a list of those posts in the {{cart}} variable which you can loop through.
+It will also contain a quantity of items in the cart.
+
+{% for post in cart %}
+<div>
+  <!-- link to the original post -->
+  <a href="{{post.permalink}}">{{post.title</a>
+  
+  <!-- show the quantity -->
+  {{post.quantity}}
+  
+  <!-- show the price formatted as currency ("money" filter in the currency of the post)-->
+  {{post.price | money: post.currency}}
+  
+  <!-- show the extended total formatted as currency -->
+  {{post.price | times: post.quantity | money}}
+</div>
+{% endif %}
 
 CHECKOUT PAGE
 -------------
@@ -50,12 +93,6 @@ You can create a new template with the same name and you will see the markup tha
 
 However, you can create any permalink.
 
-A cart is just a more complex lead form that will also create an invoice. Please refer to the lead documentation to see additional form fields needed to create an invoice with a lead.
-
-The folloiwng fields are added to the lead form:
-
-invoice[0][post_id]
-invoice[0][quantity]
 
 LEAD NOTIFICATION
 -----------------
