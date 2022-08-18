@@ -1,0 +1,51 @@
+TRANSLATION & LOCALE SWITCHING
+------------------------------
+
+The system supports switching between two locales.
+The default locale is always English (for now).
+
+MARKUP
+------
+Markup the content that you want to translate as follows with a "tr" class:
+
+Examples:
+<div class="tr">Hello world</div>
+<option value="123" class="tr">One two three</option>
+<title class="tr">Some meta title</title>
+
+TRANSLATING
+-----------
+You translate the text on the backend manually.
+
+URLS
+----
+
+Normally a url could look like this:
+https://yoursite.com/blog
+
+To view the Thai version of this url
+https://yoursive.com/th/blog
+
+The locale is:
+https://yoursive.com/[locale]/blog
+
+It should match the secondary locale your site is set in.
+
+Notes:
+The system will automatically change all the URLS for you when you switch
+
+SWITCHING
+---------
+You can switch languages by just changing the URL
+
+Important:
+Add a "notr" attribute so that the system does not change these urls.
+
+Example:
+
+{% if locale == "th" %}
+  <a href="/blog" notr="true">English</a>
+{% else %}
+  <a href="/th/blog" notr="true">Thai</a>
+{% endif %}
+
