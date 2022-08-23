@@ -8,6 +8,7 @@ You can create posts that automatically get sent out based on the type of leads 
 
 The title of each post is the subject of the email.
 The content of the post is the message of the email.
+The subtitle of the post is the preheader of the email.
 
 Creating Posts
 --------------
