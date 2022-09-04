@@ -16,10 +16,12 @@ Posts that you designate for drip emails must be formatted as:
 type: "drip"
 subtype: "foo" (example)
 
+These posts without a subtype will just be sent to everyone in your system.
+
 Creating Leads
 --------------
 Leads that you want to have a drip campaign for must have a type matching the post subtypes:
-type: "foo"
+type: "foo".
 
 Ordering
 --------
