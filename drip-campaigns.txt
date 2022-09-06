@@ -27,4 +27,13 @@ Ordering
 --------
 Drop emails will be sent in the order they are created.
 
+Schedule
+--------
+We look for new leads and users to add to the drip queue every 10 minutes.
+
+We look for new items in the Drip queue to be sent at the top of every hour.
+
+The system will send drip emails for a user every 48 hours.
+
+At most, a new user added to the system will get their first drip email at the top of the next hour.
 
