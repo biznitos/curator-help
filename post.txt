@@ -1,5 +1,34 @@
-POST CAPTURE FORM
-=================
+GETTING POSTS
+=============
+
+You can retrieve a single post or a list of posts using the JSON API.
+Your site name:
+https://[site_url]
+
+Example:
+https://mysite.com/api/post
+https://mysite.com/api/posts
+
+Get a single post
+-----------------
+GET /api/post
+
+Parameters:
+* permalink
+-or-
+* zid
+
+Get a list of posts
+-------------------
+GET /api/posts
+
+Parameters:
+* type
+* search (optional - can search for posts with a specific type)
+* sort
+
+CREATING POSTS
+==============
 
 You can create a new post on any page by preparing a form with these attributes.
 
