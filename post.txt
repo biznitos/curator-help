@@ -25,8 +25,8 @@ GET /api/posts
 Parameters:
 * type
 * search (optional - can search for posts with a specific type)
-* sort (optional - default is recently published) options: published|title|created|updated
-* limit (optional - default is 100 posts) max 500 posts
+* sort (optional - default is pubdate) options: updated|oldest|alpha|newest|type|subtype|pubdate
+* limit (optional - default is 100 posts) max 1000 posts
 
 CREATING POSTS
 ==============
