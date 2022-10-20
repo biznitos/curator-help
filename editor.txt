@@ -1,0 +1,37 @@
+RICH TEXT EDITOR
+================
+
+You can convert a TextArea field into a rich text editor.
+We use CKEDITOR.
+
+You can edit the toolbar as you need.
+
+Example:
+--------
+
+<textarea name="content" id="rich-editor"></textarea>
+
+Javascript Code
+---------------
+
+<!-- editor -->
+<script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script>
+<script>
+  ClassicEditor
+    .create(document.querySelector('#rich-editor'), {
+      toolbar: {
+        items: ["heading", "|", "bold", "italic", "link", "|", 'bulletedList', 'numberedList', "|", 'blockQuote', 'insertTable', 'mediaEmbed', "|", "undo", "redo"]
+      }
+    })
+    .catch( error => {
+      console.error( error );
+  });    
+</script>
+<!-- /editor -->
+
+Read further documentation for CKEDITOR here:
+https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start.html#running-a-simple-editor
+
+TODO:
+-----
+Image upload
