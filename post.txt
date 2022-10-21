@@ -56,6 +56,11 @@ will not overwrite what's already there.
 Create a profile update form to deal with that.
 If the person is already logged into the site, these will be ignored.
 
+CUSTOM DATA:
+* data[xxxxx]
+Example
+<input type="text" name="data[age]" value="123">
+
 ADDITIONAL NOTES:
 * cover_image (an upload field with the main image for the post)
 * pubdate = "now" (will publish the post -- don't do this unless you really want to)
