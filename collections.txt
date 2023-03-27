@@ -65,7 +65,7 @@ tag
 
 >> Ordering, Naming & Limiting
 limit - how many posts to return
-order - how to sort posts ("updated", "alpha", "newest", "pubdate", "oldest", "type", "subtype" - default: "pubdate")
+order - how to sort posts ("updated", "alpha", "newest", "pubdate", "oldest", "type", "subtype", "popular" - default: "pubdate")
 query - fulltext search string
 name - the name of the collection instead of "posts"
 one - truthy -- returns a single post not in an array
@@ -82,6 +82,16 @@ Example - returns a single post and calls it "blog" in the context
 
 Example - Return some posts containing the text anywhere in the tag field
 {% posts tag: "trump" %}
+
+Pagination Variables:
+---------------------
+Replace [name] with the name of the output collection. 
+Example:
+{% posts limit:10, order:"alpha", name:"alpha_posts" %}
+{{alpha_posts_page_number}}
+{{alpha_posts_page_size}}
+{{alpha_posts_total_pages}}
+{{alpha_posts_total_entries}}
 
 Options
 -------
