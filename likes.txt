@@ -1,0 +1,22 @@
+LIKES
+-----
+
+You can like a post, user, or lead.
+
+ENDPOINT:
+/api/social/like
+
+METHOD:
+post
+
+PARAMS:
+* id - the ZID of the post
+* type - [post|user|lead]
+* note (optional)
+* redirect_url (not used in AJAX calls)
+
+VIA AJAX:
+Returns {status: boolean}
+
+VIA FORM:
+Redirects back somewhere.
