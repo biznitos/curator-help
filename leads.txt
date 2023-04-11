@@ -27,6 +27,12 @@ Optional fields:
 * parent_user_id (user_site.id of current user in site)
 * subtype
 * utm_xxxx - UTM Tracking notification fields. (xxxx can be any or all of: source, campaign, medium, etc)
+* post_id - a post id associated with this lead, will notify the email in that post, or the owner of the post.
+* autoresponder - a zid of a post to use as a email reply to the customer (eg digital deliveries/downloads).
+* worker_user_id - a specific member of the site to tag this lead to
+* scheduled - a datetime
+* notes - notes in the lead
+* location - a mappable address of a place eg: "345 Maple Street, Brookly, NY, 10115, USA"
 * customer[phone]
 * customer[phone]
 * customer[gender] (male/female/other/anything)
@@ -50,53 +56,37 @@ If the customer already exists in the system, this information
 will not overwrite what's already there. 
 Create a profile update form to deal with that.
 
-Lead Notificaiton:
-* notify
-* parent_user_id
-If a Post ID (zid) or parent_user_id is supplied,
-The involved user will receive an email notification for the 
-user or the author of the post. Example, a user can post some information, 
-then a lead can be captured based on it. An email notification will be 
-sent ot the author of the form with all the above fields captured.
+LEAD NOTIFICATIONS
+==================
 
-Notifying multiple people:
-To notify a cohort of people, they must first have prepared posts 
-that match the type and subtype of the lead.
+post_id:
+When a post_id is set on the lead, the system will send a lead notification to either the email in the post, or the owner of the post.
 
-IMPORTANT: These posts must also at least contain at least an email address.
+worker_user_id:
+When you set this user_id, this member will be notified as well.
 
-IMPORTANT: You also need a text template with the permalink "notify_all" that contains the
-email that is to be sent.
+The general site email will always get all notifications.
 
-IMPORTANT: To switch on notification, include this variable in your form 
-and set to the parent_zid of a post that these posts are children of:
-* notify_all
-<input type="hidden" name="notify_all" value="{{some_post_zid}}">
+I no post_id or worker_user_id is set, then all admins of the site will get notifications.
 
 
-Autoresponder (to be deprecated):
-* autoresponder
-a Post ID (zid). This is good if you want to provide a download or some 
-other information that you want to immediately send to the user. 
-Prepare a post, with an external link to anything you want. 
-Once the lead is submitted, an email will be sent to the 
-submitter with anything you hve in the post.
+AUTORESPONDERS
+==============
 
-Autoresponder (new)
-To create an autoresponder for a lead, setup an email
-template with the permalink autoresponder_xxxx,
-where xxxx is the type of lead.
-example: "autoresponder_cleaning"
+When you want a digital download, you need to prepare a post with the email content in it.
+Use the "zid" of that post in the "autoresponder" field of the lead to have the post delivered.
+These items in the post will be as follows:
 
-In the Autoresponder template, 
-the following Liquid variables
-are available for use:
-{{xxxx}} -- system variables
-{{site}} -- site info
-{{lead}} -- the lead info
-{{lead.user}} -- user who submitted the lead
-{{lead.parent_user}} -- parent user of lead
-{{lead.parent_user_site}} -- parent user site info
-{{lead.post}} -- info from a given post zid
+title => subject of email
+subtitle => preheader (optional)
+body => the complete HTML message of the email
+email => a "Reply-To" email. If not, the site's email will be used.
+
+It will be your responsibilty to include a link to the digital download in the body of the email.
+
+Variables available in the email
+{{user.xxxx}}
+{{site.xxxx}}
+{{lead.xxxx}}
 
 Leads can be viewed in the Admin.
