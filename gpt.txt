@@ -1,0 +1,30 @@
+GPT
+===
+
+Use ChatGPT to generate content given inputs from a form.
+
+Step #1 - Create your prompt
+----------------------------
+Create a post with the type "prompt".
+It should have the following information in the following fields:
+
+* post.action:
+The actual prompt you are going to use in GPT. 
+This prompt can use {{input}} fields taken directly from a form to interpolate in your prompt.
+
+* src
+should always be gpt
+
+* src_id
+the gpt model ID to use. Defaults to "gpt-3". Example: "gpt-4"
+See model names on the GPT documentation website.
+
+Step #2 Create your form
+------------------------
+Create a form on your webpage that will post to the following endpoint:
+
+POST: /api/autogpt/v1
+
+Example:
+<form method="POST" action="/api/autogpt/v1">
+</form>
