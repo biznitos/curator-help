@@ -64,6 +64,8 @@ If the form is accepted, the system will write the answer using the GPT model yo
 generate a new lead with it, and email the answer directly to the person who asked it.
 You will also get a lead notification.
 
-Step #4
--------
-There is no Step #4!
+Step #4 - Use the generated post
+--------------------------------
+A post will be created with the output of the generted content.
+You can delete it, editing it or even publish it.
+It will have the same "type" and "subtype" from the form.
