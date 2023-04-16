@@ -1,23 +1,25 @@
-GPT
-===
+GPT ANSWERS
+===========
 
-Use ChatGPT to generate content given inputs from a form.
+Use ChatGPT to generate content and answers given inputs from a form.
 
 Step #1 - Create your prompt
 ----------------------------
-Create a post with the type "prompt".
+Create a post with any type you want. We recommend: "prompt".
 It should have the following information in the following fields:
 
 * post.action:
 The actual prompt you are going to use in GPT. 
 This prompt can use {{input}} fields taken directly from a form to interpolate in your prompt.
 
-* src
-should always be gpt
-
-* src_id
-the gpt model ID to use. Defaults to "gpt-3". Example: "gpt-4"
-See model names on the GPT documentation website.
+EXAMPLE PROMPT:
+  Your are a travel agent at a company named Baan Smile.
+  Baan Smile is a a travel agent that helps people travel to Thailand.
+  This question is always about Thailand.
+  Give a detailed answer to this question asked by a customer of Baan Smile: "{{title}}".
+  Your answer should be between 250 and 500 words.
+  At the end explain how Baan Smile can help the person asking to travel to Thailand. 
+  Ask the person to email us at hello@baansmile.com if they need futher help.
 
 Step #2 Create your form
 ------------------------
@@ -25,6 +27,43 @@ Create a form on your webpage that will post to the following endpoint:
 
 POST: /api/autogpt/v1
 
+Required Fields (will interpolate in the prompt as {{fieldname}}:
+* type - the type of lead to create
+* title - the title of the lead to create
+* prompt: the zid of the prompt content post you created earlier
+* customer[email] - required
+* return_url - the url to return to after the form is submitted
+* failure_url - the url to return to if the content failed
+
+Optional Fields
+* subtype - the subtype of the lead created
+* customer[name] - optional - will go into the prompt as {{customer.name}}
+* customer[phone] - optional - will go into the prompt as {{customer.email}}
+* data[xxxx] - these fields will go into the prompt as variabled {{data.xxxx}}
+* model - any openai model that you want to use. Defaults to "gpt-3.5-turbo"
+
 Example:
 <form method="POST" action="/api/autogpt/v1">
+  <input type="hidden" name="prompt" value="x282472ybuygruwr78w">
+  <input type="hidden" name="type" value="question">
+  <input type="hidden" name="subtype" value="thailand">
+  <input type="hidden" name="return_url" value="/thanks">
+  <input type="hidden" name="failure_url" value="/failed">
+  <input type="hidden" name="model" value="gpt-4">
+ 
+  <label>Ask a question about Thailand</label>
+  <input type="text" name="title" placeholder="What is the best time to visit Thailand?" required />
+  
+  <button>Submit your Question</button>
+  <small>Response time less than 5 minutes</small>
 </form>
+
+Step #3 - Get your lead notfication
+-----------------------------------
+If the form is accepted, the system will write the answer using the GPT model you specified, 
+generate a new lead with it, and email the answer directly to the person who asked it.
+You will also get a lead notification.
+
+Step #4
+-------
+There is no Step #4!
