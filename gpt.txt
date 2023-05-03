@@ -20,6 +20,25 @@ EXAMPLE PROMPT:
   Your answer should be between 250 and 500 words.
   At the end explain how Baan Smile can help the person asking to travel to Thailand. 
   Ask the person to email us at hello@baansmile.com if they need futher help.
+  
+VARIABLES AVAILABLE IN PROMPT
+-----------------------------
+Example: {{data.weight}}
+
+* data.xxxx (taken from form data[xxxx])
+* customers.xxxx (taken from form customer[xxxx])
+* title
+* notes
+* type
+* subtype
+* scheduled
+* location
+* site.logo
+* site.name
+* site.description
+* site.email
+* site.phone
+* site.site_url (full URL to your site)
 
 Step #2 Create your form
 ------------------------
