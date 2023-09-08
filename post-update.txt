@@ -4,6 +4,7 @@ Posts can only be updated by the person who created them.
 You need the "zid" of the post in order to update it.
 
 Updateable fields (required when updating):
+Must be like post[xxxx] where xxxx is one of the below
 * title 
 * subtitle
 * content
