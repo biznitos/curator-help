@@ -15,6 +15,10 @@ Optional fields
 * cover_image (attached file)
 * location (example: "Kingston, Jamaica")
 
+Processing Fields
+* return_url - where to go when update is successfully completed
+* failure_url - where to go if the update failed
+
 Viewing a Post
 =====================
 Normally, you'd be viewing a post from a link like this:
