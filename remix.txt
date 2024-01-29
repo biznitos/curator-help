@@ -1,0 +1,28 @@
+REMIX CONTENT FROM URLS
+-----------------------
+
+PURPOSE
+-------
+Takes a list of posts with URL's and rewrite them based on the urls they point to. 
+A good way to rewrite existing content quickly from certain external sources.
+
+HOW
+---
+Add (or upload from CSV) a list of posts with at least:
+
+* title
+* url
+* type (format: remix:[type], example: remix:blog)
+* permalink
+
+The system will process these posts starting with the oldest one, 
+fetch the content of the url, and remix the post with new content.
+It will keep the title.
+
+OTHER PARAMETERS
+----------------
+You can add any other normal post columns, but these are special values:
+
+* subtitle: style=[howto, instructions, information, etc],words=500,grade=6,model=gpt-4-turbo-preview
+
+Once you create the post it will immediately queue it for crawling and creating.
