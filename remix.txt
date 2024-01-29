@@ -23,7 +23,9 @@ OTHER PARAMETERS
 ----------------
 You can add any other normal post columns, but these are special values:
 
-* subtitle: style=[howto, instructions, information, etc],words=500,grade=6,model=gpt-4-turbo-preview,extra=additional prompt snippet
+* subtitle: style=[howto, instructions, information, etc]|words=500|grade=6|model=gpt-4-turbo-preview|extra=additional prompt snippet
+
+Use "|" as the separator between key value pairs.
 
 * style = style of post
 * words = max number of words (default 500)
