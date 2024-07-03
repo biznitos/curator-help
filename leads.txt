@@ -23,6 +23,15 @@ Required fields:
 Payment related fields (This will then go through the payment flow)
 * payment_zid the zid of a post containing price, etc
 
+Uploads:
+You can now attach files to submitted leads.
+These are stored in the Files table with src="Lead" and src_id=(the id of the lead)
+* files[] (must be array, even if just one file)
+
+Post Processing:
+You can pass the new lead into a post processor you wrote in Elixir by passing the permalink of the processor.
+* process (a permalink)
+
 Optional fields:
 * parent_user_id (user_site.id of current user in site)
 * subtype
