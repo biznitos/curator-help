@@ -19,13 +19,17 @@ Prompts or contextual information can make up any number of lines.
 Context or Prompt
 
 xxxx = "role" -- This must always be there. Can never have another value.
+
 yyyy = "user" -- What this message is for. Values are either "system" or "user".
+
 zzzz = "fieldname" -- The fieldname of the post you need to update. If no fieldname, put "none"
 
 Example:
+
 **role:system:none** <- This is the first directive and the next lines that follow must be either the context, or the prompt.
 
 Example:
+
 **role:user:description** <- Update the description field with the prompt below.
 
 EXAMPLE
