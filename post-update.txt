@@ -5,16 +5,8 @@ You need the "zid" of the post in order to update it.
 
 Updateable fields (required when updating):
 Must be like post[xxxx] where xxxx is one of the below
-* title 
-* subtitle
-* content
-* description 
-* url
-* meta
-
-Optional fields
-* cover_image (attached file)
-* location (example: "Kingston, Jamaica")
+* All fields can be updated
+* files[] will add files to the list of files/photos/videos for this post
 
 Processing Fields
 * return_url - where to go when update is successfully completed
