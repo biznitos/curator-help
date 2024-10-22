@@ -42,10 +42,13 @@ DELETING UPLOADED FILES
 =======================
 
 PATH
-/api/file/v1/:zid
+/api/file/v1
 
 METHOD
 DELETE
+
+PARAMETERS
+zid - (the zid of the file)
 
 Example:
 <form method="DELETE" action="/api/file/v1">
