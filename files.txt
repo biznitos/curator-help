@@ -49,6 +49,10 @@ DELETE
 
 PARAMETERS
 zid - (the zid of the file)
+return_url - where to return to (can be ignored if you are using javascript)
+failure_url - where to return to if failed (can be ignored if you are using javascript)
+
+This will not return JSON, so you have to check the response and let your javascript respond how you need to.
 
 Example:
 <form method="DELETE" action="/api/file/v1">
