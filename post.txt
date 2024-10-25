@@ -30,6 +30,29 @@ Parameters:
 * limit (optional - default is 100 posts) max 1000 posts
 * page (optional - default 1)
 
+CHECK IF A POST EXISTS
+======================
+
+You can check if a post (or posts) exists.
+
+Form Action:
+/api/post_exists/v1
+
+Method:
+GET
+
+Required Fields:
+* fields[]
+
+Fields to check against
+* title
+* permalink
+* src
+* src_id
+* others
+
+You will get a 200, or a 404.
+
 CREATING POSTS
 ==============
 
