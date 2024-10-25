@@ -44,14 +44,17 @@ GET
 Required Fields:
 * fields[]
 
-Fields to check against
-* title
-* permalink
-* src
-* src_id
-* others
+Returns:
+Status 200 or 404 and test "found" or "not found"
 
-You will get a 200, or a 404.
+Example:
+fields[src] = "foo"
+fields[src_id] = "bar"
+fields[type] = "blog"
+
+Note:
+If calling by api, you need to encode the fields
+"http://mysite.com/api/post_exists/v1?fields%5Btype%5D=blogger"
 
 CREATING POSTS
 ==============
