@@ -1,0 +1,15 @@
+CREATING QR Codes
+
+You can create a qr code and embed it into your HTML:
+
+ENDPOINT:
+/api/qrcode
+
+PARAMETERS:
+data: urlencoded data, eg: urls, codes, up to 1,500 bytes
+format: png/svg (default png)
+size: (in pixels) from 250 - 2500 (units of 250)
+
+EXAMPLE:
+<img src="https://mysite.com/api/qrcode?data=hello+world&width=750" width="750" height="750">
+
