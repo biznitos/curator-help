@@ -20,8 +20,12 @@ Required fields:
 * customer[email] - email address of the person filling this form
 * customer[name] - name of the person filling the form
 
-Payment related fields (This will then go through the payment flow)
-* payment_zid the zid of a post containing price, etc
+Payment related fields
+* cart[]
+Cart is a list of post id's that you want to use for invoice line items.
+This will automatically make an invoice with line items for each of the posts and its price.
+When you do this, you should redirect the lead page to the invoice page so the customer can pay.
+example: return_url="/crm/invoice/__ZID__"
 
 Uploads:
 You can now attach files to submitted leads.
