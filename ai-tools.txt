@@ -24,6 +24,7 @@ Your html form can contain the following hidden fields:
 * return_url (optional - if blank, will redirect ot the newly created post)
 * failure_url - where to redirect if failure
 * customer[xxxx], must have at least customer[email]
+* publish "1" - publish the post.
 
 LLM PROMPT
 ----------
