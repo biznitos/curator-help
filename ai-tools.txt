@@ -19,10 +19,66 @@ Your html form can contain the following hidden fields:
 * slack - "1" will send us a slack notification if notification is setup for this site.
 * prompt - the permalink of a template containing the prompt used to generate this post. (you must create a template with the prompt itself)
 * model - the model of the LLM to use, defaults to "llama3-70b-8192", can also use "gpt-4o" and "gpt-4o-mini" along with other groq models.
+* context[xxxx] - information for the context in the prompt.
+* utm_source, utm_campaign (optional)
+* return_url (optional - if blank, will redirect ot the newly created post)
+* failure_url - where to redirect if failure
+* customer[xxxx], must have at least customer[email]
 
 LLM PROMPT
 ----------
 The LLM prompt itself must be carefully written to output JSON fields that correspond to normal post field names.
 
-EXAMPLE
--------
+EXAMPLE PROMPT
+--------------
+You are a visa advisor for Thailand, you help people to decide what kind of visa they will need based on the information given. 
+Keep in mind facilities like extension of the visa in Thailand if applicable.
+Keep in mind new visas such as the DTV visa for longer stays.
+Keep in mind age of applicant and the O-A retirement visa.
+Go for the cheapest type of visa that satisfied the time they need to spend in Thailand.
+
+Output in JSON format:
+* content - in Markdown format write detailed information with the following sections, that include section headings: Type of visa Required, Where to apply, Application Instructions, Visa Extension Notes, Additional Notes
+* subtitle - type of visa required
+* title - A meta title that captures the essence of what the customer wants in a question format, please respect SEO meta title length and best keywords.
+* description - a meta description that outlines the problem and the solution to the problem, please respect SEO meta description length and keywords.
+
+CONTEXT:
+Country of Origin: {{context.country}}
+Duration in Thailand: {{context.duration}}
+Age: {{context.age}}
+Notes: {{context.notes}}
+
+EXAMPLE TEMPLATE
+----------------
+Create a tempalte with the above prompt in its content.
+Assume the template for this example has a permalink of "visa-advisor-prompt"
+
+EXAMPLE FORM
+------------
+<form method="POST" action="/api/v1/tool">
+  <input type="hidden" name="type" value="blog">
+  <input type="hidden" name="notify" value="1">
+  <input type="hidden" name="slack" value="1">
+  <input type="return_url" value="/tools/visa-advisor"> <!-- permalink to this page -->
+
+  <label>Country of Origin</label>
+  <input type="text" name="context[country]">
+
+  <label>How much time will you spend in Thailand?<label>
+  <input type="text" name="context[duration]" placeholder="Example: 6 months">
+
+  <label>Tell us about your case as much detail as possible</label>
+  <textarea name="context[notes]" rows="4"></textarea>
+
+  <label>Your age</label>
+  <input type="number" name="context[age]">
+
+  <label>My Email</label>
+  <input type="email" name="customer[email]">
+
+  <label>My Name</label>
+  <input type="text" name="customer[name]">
+
+  <button class="btn">CREATE MY VISA PLAN</button>
+</form>
