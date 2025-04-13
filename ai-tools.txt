@@ -24,7 +24,7 @@ Your html form can contain the following hidden fields:
 * return_url (optional - if blank, will redirect ot the newly created post)
 * failure_url - where to redirect if failure
 * customer[xxxx], must have at least customer[email]
-* publish "1" - publish the post.
+* pubdate "now" - publish the post.
 
 LLM PROMPT
 ----------
@@ -57,7 +57,7 @@ Assume the template for this example has a permalink of "visa-advisor-prompt"
 
 EXAMPLE FORM
 ------------
-<form method="POST" action="/api/v1/tool">
+<form method="POST" action="/api/tool/v1">
   <input type="hidden" name="type" value="blog">
   <input type="hidden" name="notify" value="1">
   <input type="hidden" name="slack" value="1">
