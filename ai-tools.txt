@@ -97,7 +97,7 @@ EXAMPLE FORM
 NOTIFICATION EMAIL
 ------------------
 If you turn on notifications, your user will get an email from the template:
-"tool-notify-email"
+"tool_notify_email" (no leading slash)
 
 These variables are available in the email template.:
 {{site.xxxx}}
