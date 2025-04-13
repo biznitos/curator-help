@@ -54,6 +54,16 @@ EXAMPLE TEMPLATE
 ----------------
 Create a tempalte with the above prompt in its content.
 Assume the template for this example has a permalink of "visa-advisor-prompt"
+Standard variables available in the template are:
+{{site.xxxx}}
+{{time}}
+{{localtime}}
+{{hour}}
+{{customer.xxxx}}
+{{year}}
+{{context.xxxx}}
+{{site_url}}
+
 
 EXAMPLE FORM
 ------------
