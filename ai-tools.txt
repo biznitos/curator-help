@@ -93,3 +93,24 @@ EXAMPLE FORM
 
   <button class="btn">CREATE MY VISA PLAN</button>
 </form>
+
+NOTIFICATION EMAIL
+------------------
+If you turn on notifications, your user will get an email from the template:
+"tool-notify-email"
+
+These variables are available in the email template.:
+{{site.xxxx}}
+{{time}}
+{{localtime}}
+{{hour}}
+{{customer.xxxx}}
+{{year}}
+{{context.xxxx}}
+{{site_url}}
+{{post.xxxx}}
+
+You can edit and override it.
+
+
+
