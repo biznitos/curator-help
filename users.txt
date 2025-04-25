@@ -11,7 +11,7 @@ Users are assigned a random username upon creation.
 They can change this on the account update page "/account".
 
 Templates:
-To display a username, you have to create a template with the permalink "user".
+To display a username, you have to create a template with the permalink "user" (no leading "/").
 
 Template Variables:
 In the template, the following liquid data will exists:
@@ -23,11 +23,15 @@ In the template, the following liquid data will exists:
 * {{member.data}} (map)
 * {{member.notes}}
 * {{member.usubscribed}} (boolean)
+* {{member.inserted_at}} (date they joined this site)
+* {{member.last_here}} (the last time they were here)
+* {{member.interactions}} (map)
+* {{member.following}} (array of user_id of people who are following)
 * {{member.user.all-user-fields}} (read page on user fields)
 
 IMPORTANT
 =========
-We do not use the {{user}} variable, since this is reserved for the currently logged in user.
+We do not use the {{user}} or {{user_sites}} variables, since these are reserved for the currently logged in user.
 
 FOLLOW
 ======
