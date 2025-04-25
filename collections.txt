@@ -4,6 +4,29 @@ COLLECTIONS
 A collection can be a list of posts, users, leads, etc.
 Special tags bring collections into the current liquid contex.
 
+USERS
+-----
+Returns list of users from teh current site
+with specific filters:
+{% users [options] %}
+
+Options:
+role - type of user
+search - search by name or username
+subscribed - truthy, any value in here will limit to users who are subscribed
+limit - how many records (default 10)
+one - return a single record as a map (not in a list)
+
+Users will always be ordered by most recently joined first.
+
+Example - show last 10 users:
+{% users limit:10 %}
+
+Example - show only users of type "customers":
+{% users limit:10, role:"customer" %}
+
+Output is a list of rows names "members" that is similar in structures as seen in users.txt
+
 LEADS
 -----
 Returns list of leads from the current site
