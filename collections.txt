@@ -12,7 +12,7 @@ with specific filters:
 
 Options:
 role - type of user
-search - search by name or username
+search - search by username
 subscribed - truthy, any value in here will limit to users who are subscribed
 limit - how many records (default 10)
 one - return a single record as a map (not in a list)
