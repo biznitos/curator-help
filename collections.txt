@@ -16,6 +16,8 @@ search - search by username
 subscribed - truthy, any value in here will limit to users who are subscribed
 limit - how many records (default 10)
 one - return a single record as a map (not in a list)
+order - (updated, newest) - default: newest
+name - the name of the collection returned. By default: "members"
 
 Users will always be ordered by most recently joined first.
 
@@ -26,6 +28,13 @@ Example - show only users of type "customers":
 {% users limit:10, role:"customer" %}
 
 Output is a list of rows names "members" that is similar in structures as seen in users.txt
+
+There is also pagination:
+(replace "collection_name" with the name of your collection, eg: "members_page_size")
+* collection_name_page_number
+* collection_name_page_size
+* collection_name_total_pages
+* collection_name_total_entries
 
 LEADS
 -----
