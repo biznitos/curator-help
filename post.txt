@@ -119,6 +119,11 @@ Multiple post pages will have
   <p>{{post.title}}</p>
 {% endfor %}
 
+RELATED FIELDS
+--------------
+* created_by - all the information from users table about this person who created the post
+* user_site - the user_site information for this user. Includes username, etc
+
 BASE
 ----
 * id
