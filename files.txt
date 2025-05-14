@@ -56,7 +56,7 @@ This will not return JSON, so you have to check the response and let your javasc
 
 Example:
 <form method="DELETE" action="/api/file/v1">
-  <input type="hidden" name="method" value="_delete">
+  <input type="hidden" name="_method" value="delete">
   <input type="hidden" name="zid" value="{{file.zid}}">
   <button>Delete file</button>
 </form>
