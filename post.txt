@@ -97,6 +97,11 @@ return_url
 You can add an __id__, __zid__, or __permlaink__ in the return_url template.
 Example: "/foo?id=__id__"
 
+POST PROCESSING
+===============
+You can call some code to process your code
+* process - the permalink of an elixir process to further do processing
+
 NEW POST NOTIFICATION
 =====================
 You can send a generic email notification when a new post has been created.
@@ -153,11 +158,11 @@ MEDIA
 
 DATES
 -----
-* pubdate
+* pubdate (_pubdate)
 * created_by
 * updated_by
-* inserted_at
-* updated_at
+* inserted_at (cannot change)
+* updated_at (cannot change)
 * expires
 
 ADDRESS
@@ -190,3 +195,4 @@ META
 * opens
 * src
 * src_id
+* meta1 - meta6
