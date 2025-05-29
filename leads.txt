@@ -82,7 +82,6 @@ The general site email will always get all notifications.
 
 I no post_id or worker_user_id is set, then all admins of the site will get notifications.
 
-
 AUTORESPONDERS
 ==============
 
