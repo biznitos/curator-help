@@ -20,6 +20,7 @@ Required fields:
 * customer[name] - name of the person filling the form
 
 Optional fields:
+* files[] - any type of files you want to attach with the customer record
 * message
 * utm_xxxx - UTM Tracking notification fields. (xxxx can be any or all of: source, campaign, medium, etc)
 * location - a mappable address of a place eg: "345 Maple Street, Brookly, NY, 10115, USA"
