@@ -1,0 +1,51 @@
+CUSTOMER CAPTURE FORMS
+======================
+
+You can capture leads on any site by preparing a form with these attributes
+
+Form Action:
+/api/customer/v1
+
+Method:
+POST
+
+Default template path:
+/go
+
+Required fields:
+* subject
+* return_url - The URL to go to when the lead form is successful (can contain __zid__ or __id__ in it)
+* failure_url - The URL to return to when the lead form failed
+* customer[email] - email address of the person filling this form
+* customer[name] - name of the person filling the form
+
+Optional fields:
+* message
+* utm_xxxx - UTM Tracking notification fields. (xxxx can be any or all of: source, campaign, medium, etc)
+* location - a mappable address of a place eg: "345 Maple Street, Brookly, NY, 10115, USA"
+* customer[phone]
+* customer[phone]
+* customer[gender] (male/female/other/anything)
+* customer[occupation]
+* customer[first_name]
+* customer[last_name]
+* customer[middle_name]
+* customer[street]
+* customer[city]
+* customer[country_code] (eg: US, JM, etc)
+* customer[dob] - date of birth
+* customer[url]
+* customer[meta1]
+* customer[meta2]
+* customer[meta3]
+* data[xxxxx] - xxxxxx can be anything. This allows you to create quite complex forms as needed
+
+NOTE:
+Customer[xxxxxx] information will only be added once. 
+If the customer already exists in the system, this information 
+will not overwrite what's already there. 
+Create a profile update form to deal with that.
+
+
+
+
