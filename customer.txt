@@ -14,7 +14,7 @@ Default template path:
 
 Required fields:
 * subject
-* return_url - The URL to go to when the lead form is successful (can contain __zid__ or __id__ in it)
+* return_url - The URL to go to when the form is successful (can contain __email__ or __name__ in it)
 * failure_url - The URL to return to when the lead form failed
 * customer[email] - email address of the person filling this form
 * customer[name] - name of the person filling the form
