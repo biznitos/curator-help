@@ -1,7 +1,7 @@
 CUSTOMER CAPTURE FORMS
 ======================
 
-You can capture leads on any site by preparing a form with these attributes
+You can capture contact and new customers on any site by preparing a form with these attributes
 
 Form Action:
 /api/customer/v1
