@@ -1,0 +1,45 @@
+LEAD GENERATION VIA CHATBOT
+
+You can use a chatbot to ask people for information and guide them through a process.
+This will generate a new customer and save the entire chat transcript in their account.
+
+You can have many different chatbots on a single site.
+
+Chatbots will use GPT-5.1 by default.
+
+SYSTEM PROMPT
+-------------
+The system prompt will contain all the basic information about your business already.
+So you need not repeat all that into your custom prompt.
+You cannot edit the system prompt.
+
+SETUP YOUR BUSINESS LOGIC PROMPT
+---------------------------
+Create a text template with any slug eg: "dtv-chatbot".
+Type your prompt in this template. 
+This will be passed on directly to the LLM.
+These site variables can be interpolated:
+{{name}}, {{description}}, {{address}}m {{email}}.
+
+CREATE YOUR CHATBOT PAGE
+------------------------
+Go into the admin and create a new file with the slug "/chatbot".
+This will bring in the base code for any chatbot that you can edit.
+
+Open it, edit it, save it, and recommend to rename it to something else.
+Exampe "/chatbot/widgets"
+
+** Add the name containing your business logic prompt slug:
+data-prompt="xxxxx" which is the slug for your business login prompt.
+Example: data-prompt="dtv-chatbot"
+
+** Change the name of your assistant
+data-assistant-name="Janice"
+
+Edit and add anything around the chat interface, but leve the key ID's in place, or it will not work.
+
+START CHATTING
+--------------
+Test the chatbot a few times, and adjust your BUSINESS LOGIC prompt until you get it right.
+
+That's it!
